@@ -11,11 +11,62 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class=col>
-                {{ products }}
+    <div class="overlay"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col text-center">
+                    <h2>
+                        Products
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="product-container col-10 offset-1">
+                    <div class="row"></div>
+                    <div class="row">
+                        {% for product in products %}
+                            <div class="col-sm-12 col-md-6 col-lg-5 col-xl-4">
+                                <div class="card h-100 border-0">
+                                    <div class="row">
+                                        <div class="col-5">
+                                            {% if product.image %}
+                                            <a href="">
+                                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                            </a>
+                                            {% else %}
+                                            <a href="">
+                                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                            </a>
+                                            {% endif %}
+                                        </div>
+                                        <div class="col-7">        
+                                            <div class="card-body">
+                                                <p class="text-dark"><strong>{{ product.name }}</strong></p>
+                                                <p class="text-dark">Location</p>
+                                                <p class="text-dark">Frame size</p>
+                                                <p class="text-dark">Quantity</p>
+                                                <p class="lead mb-0 text-left text-dark font-weight-bold">${{ product.price }}</p>
+                                                    {% if product.rating %}
+                                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                                    {% else %}
+                                                        <small class="text-muted">No Rating</small>
+                                                    {% endif %}
+                                                <div class="row">
+                                                    <div class="col">
+                                                <a href="#" class="card-link">Buy</a>
+                                            </div>
+                                            <div class="col">
+                                                <a href="#" class="card-link">Save for later</a>
+                                            </div>
+                                            </div>
+                                            </div>
+                                        </div>    
+                                    </div>    
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 {% endblock %}
