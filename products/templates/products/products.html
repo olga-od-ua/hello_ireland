@@ -15,9 +15,22 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col text-center">
-                    <h2>
+                    <h2 class="text-dark">
                         Products
                     </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="dropdown">
+                    <a class="btn btn-secondary btn-sm dropdown-toggle logo-font font-weight-bold nav-link text-black" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sort by
+                    </a>
+                    <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                        <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price - Lowest to Highest</a>
+                        <a href="{% url 'products' %}?sort=price&direction=desc" class="dropdown-item">By Price - Highest to Lowest</a>
+                        <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                        <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                    </div>
                 </div>
             </div>
             <div class="row">
