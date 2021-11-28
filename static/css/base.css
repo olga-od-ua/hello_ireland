@@ -53,6 +53,17 @@ body {
 	z-index: -1;
 }
 
+.category-badge > span.badge {
+    background: #fff !important;
+    color: orange !important;
+    border-radius: 4px !important;
+}
+
+.category-badge > span.badge:hover {
+    background: rgba(68, 67, 67, 0.521) !important;
+    color: orange !important;
+}
+
 @media (min-width: 1200px) {
     .container {
       max-width: 80%;
