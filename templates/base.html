@@ -2,64 +2,77 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
-    
-    {% block meta %}
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- to allow Internet Explorer compatibility -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% endblock %}
+    <head>
+      
+        {% block meta %}
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- to allow Internet Explorer compatibility -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% endblock %}
 
-    {% block extra_meta %}
-    {% endblock %}
+        {% block extra_meta %}
+        {% endblock %}
 
-    {% block corecss %}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
-    {% endblock %}
+        {% block corecss %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+        {% endblock %}
 
-    {% block extra_css %}
-    {% endblock %}
+        {% block extra_css %}
+        {% endblock %}
 
-    {% block corejs %}
-    <script src="https://kit.fontawesome.com/3784920e35.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    {% endblock %}
+        {% block corejs %}
+        <script src="https://kit.fontawesome.com/3784920e35.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        {% endblock %}
 
-    {% block extra_js %}
-    {% endblock %}
+        {% block extra_js %}
+        {% endblock %}
 
-    <title>Oh, Hello Ireland! {% block extra_title %}{% endblock %}</title>
-  </head>
-  <body>
+        <title>Oh, Hello Ireland! {% block extra_title %}{% endblock %}</title>
+    </head>
 
-    <header class="container-fluid fixed-top">
-        <div class="row">
-            <div class="col navbar">
-              <nav class="navbar navbar-expand-lg navbar-light bg-light w-100 mx-auto">
-                <a class="navbar-brand main-logo-link" href="{% url 'home' %}">Oh Ireland!</a>
-                {% include 'includes/mobile-top-header.html' %}
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                {% include 'includes/main-nav.html' %}
-              </nav>
+    <body>
+        <header class="container-fluid fixed-top">
+            <div class="row">
+                <div class="col navbar">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light w-100 mx-auto">
+                    <a class="navbar-brand main-logo-link" href="{% url 'home' %}">Oh Ireland!</a>
+                    {% include 'includes/mobile-top-header.html' %}
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {% include 'includes/main-nav.html' %}
+                    </nav>
+                </div>
             </div>
-        </div>
-        <div id="shipping-treshold" class="row text-center w-auto">
-            <div class="col bg-light text-success py-1">
-                <h4 class="shipping-treshold-message text-dark">Free delivery on orders over ${{ free_shipping_threshold }}</h4>
+            <div id="shipping-treshold" class="row text-center w-auto">
+                <div class="col bg-light text-success py-1">
+                    <h4 class="shipping-treshold-message text-dark">Free delivery on orders over ${{ free_shipping_threshold }}</h4>
+                </div>
             </div>
-        </div>
-
-    </header>
+        </header>
 
     {% if messages %}
-        <div class="message-container"></div>
+        <div class="message-container text-dark">
+            {% for message in messages %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
+                        {% include 'includes/toasts/error_toast.html' %}
+                    {% elif level == 30 %}
+                        {% include 'includes/toasts/warning_toast.html' %}
+                    {% elif level == 25 %}
+                        {% include 'includes/toasts/success_toast.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/info_toast.html' %}
+                    {% endif %}
+                {% endwith %}
+            {% endfor %}
+        </div>
     {% endif %}
 
     {% block page_header %}
@@ -69,7 +82,10 @@
     {% endblock %}
 
     {% block postloadjs %}
+        <script type="text/javascript">
+            $('.toast').toast('show');
+        </script>
     {% endblock %}
 
-  </body>
+    </body>
 </html>
