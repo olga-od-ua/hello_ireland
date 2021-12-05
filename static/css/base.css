@@ -3,10 +3,10 @@ html {
 }
 
 body {
-    background: url('/media/bc4-mirror.png') no-repeat center center fixed; /* temporary image for testing */
+    background: url('/media/irish_bg_2.jpeg') no-repeat center center fixed; /* temporary image for testing */
     background-size: cover;
     height: calc(100vh - 164px);
-    color: white;
+    color: black;
     font-family: 'Lora', serif;
 }
 
@@ -15,6 +15,15 @@ h1, h2, h3, h4, h5, h6, .category-badge {
     font-weight: 300;
     text-transform: uppercase;
    }
+
+
+.bg-col {
+    background-color: rgba(255, 255, 255, 0.623) !important;
+    border-radius: 5px;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
 
 /* from Bulma */
 .icon {
