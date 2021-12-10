@@ -132,7 +132,8 @@ def delete_product(request, product_id):
     if not request.user.is_superuser:
         messages.error(request, 'You are not authorised to perform this action.')
         return redirect(reverse('home'))
+
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
-    messages.success(request, 'Product deleted!')
+    messages.success(request, f'"{product.name}" deleted!')
     return redirect(reverse('products'))
