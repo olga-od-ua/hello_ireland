@@ -1,1 +1,1 @@
-web: gunicorn hello_ireland.wsgi:application
+web: gunicorn HELLO_IRELAND.wsgi:application
