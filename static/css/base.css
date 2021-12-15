@@ -52,6 +52,19 @@ h1, h2, h3, h4, h5, h6, .category-badge {
     max-width: 550px;
 }
 
+
+/* Navbar */
+.navbar-style {
+    background-color: #eca50b;
+    color: white;
+    padding: 0px;
+    background-color: #eca50b;
+}
+
+.navbar-collapse {
+    width: 100%;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -62,7 +75,8 @@ h1, h2, h3, h4, h5, h6, .category-badge {
 }
 
 .main-logo-link {
-    width: fit-content;
+    background-color: transparent;
+
 }
 
 .buy-image-button {
