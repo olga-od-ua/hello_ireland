@@ -292,6 +292,20 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+.social-links-row {
+    background-color: #20a73d;
+    color: white;
+}
+
+.copyright-row {
+    background-color: #eca50b;
+    color: rgb(0, 0, 0);
+}
+
+.social-icons a {
+    padding: 5vw;
+}
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
