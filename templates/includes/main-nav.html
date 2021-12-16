@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse navbar-style" id="navbarSupportedContent">
-    <ul class="navbar-nav align-items-end mr-auto mx-auto">
+    <ul class="navbar-nav align-items-end mr-auto mx-auto nav-fill w-100">
         <li class="nav-item">
-            <a class="nav-link main-logo-link" href="{% url 'home' %}"><strong>Oh Ireland!</strong><i class="fas fa-seedling"></i></a>
+            <a class="nav-link main-logo-link text-black" href="{% url 'home' %}"><strong>Oh Ireland!</strong><i class="fas fa-seedling"></i></a>
         </li>
         <!-- <li class="nav-item d-block d-md-none">
             <a class="nav-link dropdown-toggle" href="{% url 'home' %}" id="home-link">
@@ -9,7 +9,7 @@
               </a>
         </li> -->
         <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="{% url 'products' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link dropdown-toggle text-black" href="{% url 'products' %}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Ready to buy
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -22,22 +22,17 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Order a custom-made image</a>
+        <a class="nav-link text-black" href="#">Custom request</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About Us</a>
+        <a class="nav-link text-black" href="#">About Us</a>
       </li>
-      {% if request.user.is_authenticated %}
-          <li class="nav-item">
-            <a class="nav-link" href="#">Saved arts</a>
-          </li>
-      {% endif %}
       <!-- Account and shopping basket code was borrowed from Code Institute studying materials -->
-      <li class="list-inline-item dropdown">
+      <li class="list-inline-item nav-item dropdown">
         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
                 <div><i class="fas fa-user fa-lg"></i></div>
-                <p class="my-0">My Account</p>
+                <p class="my-0 text-black">My Account</p>
             </div>
         </a>
         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -46,6 +41,7 @@
                     <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                 {% endif %}
                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                <a class="nav-link text-black" href="#">Saved arts</a>
                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
             {% else %}
                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -53,21 +49,21 @@
             {% endif %}
         </div>
     </li>
-    <li class="list-inline-item">
-        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+    <li class="list-inline-item nav-item">
+        <a class="{% if grand_total %}text-danger font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
             <div class="text-center">
                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                 <p class="my-0">
                     {% if grand_total %}
-                        ${{ grand_total|floatformat:2 }}
+                        €{{ grand_total|floatformat:2 }}
                     {% else %}
-                        $0.00
+                        €0.00
                     {% endif %}
                 </p>
             </div>
         </a>
     </li>
-    </ul>
+    <li class="list-inline-item nav-item">
     <!-- search form borrowed from Code Institute studying materials -->
     <form method="GET" action="{% url 'products' %}">
       <div class="input-group w-100">
@@ -81,4 +77,6 @@
           </div>
       </div>
   </form>
+</li>
+</ul>
   </div>
