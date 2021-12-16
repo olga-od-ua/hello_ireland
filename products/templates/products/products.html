@@ -99,10 +99,10 @@
                                                         </a>
                                                     </p>
                                                     {% endif %}
-                                                    {% if product.rating %}
-                                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                                    {% else %}
+                                                    {% if product.calc_rating == 0 %}
                                                         <small class="text-muted">No Rating</small>
+                                                    {% else %}
+                                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.calc_rating|floatformat:1 }} / 5</small>
                                                     {% endif %}
                                                     {% if request.user.is_superuser %}
                                                         <small class="ml-3">

@@ -52,10 +52,11 @@
                                                         </a>
                                                     </p>
                                                     {% endif %}
-                                                    {% if product.rating %}
-                                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                                    {% else %}
+
+                                                    {% if product.calc_rating == 0 %}
                                                         <small class="text-muted">No Rating</small>
+                                                    {% else %}
+                                                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.calc_rating|floatformat:1 }} / 5</small>
                                                     {% endif %}
                                                     {% if request.user.is_superuser %}
                                                         <small class="ml-3">
@@ -76,6 +77,10 @@
                                     </div>
                                     <div class="row">
                                         <p class="mt-3 text-dark">{{ product.description }}</p>
+
+                                    
+
+
                                         <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                                             {% csrf_token %}
                                             <div class="form-row">
@@ -132,6 +137,63 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- reviews -->
+                            <div class="col-sm-12 col-md-6 col-lg-5 col-xl-4">
+                                <h4>Reviews</h4>
+                                <div class="reviews-container">
+                                    {% for review in product.reviews.all %}
+                                        <div class="text-dark">
+                                            <strong>Rating: </strong>{{ review.rating }}
+                                            <br>{{ review.review_text }}
+                                            <br><i>Date: {{ review.date_added|date:"d-m-Y" }}</i>
+                                        </div>
+                                    {% empty %}
+                                        <div class="text-dark">Be the first one to leave a review</div>
+                                    {% endfor %}
+                                </div>
+
+                                <div class="text-dark">
+                                    {% if request.user.is_authenticated %}
+                                        <form method="post" action=".">
+                                            {% csrf_token %}
+                        
+                                            <div class="field">
+                                                <label>Rating</label>
+                        
+                                                <div clas="control">
+                                                    <div class="select">
+                                                        <select name="rating">
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5" selected>5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="field">
+                                                <label>Review</label>
+                        
+                                                <div class="control">
+                                                    <textarea class="textarea" name="review_text"></textarea>
+                                                </div>
+                                            </div>
+                        
+                                            <div class="field">
+                                                <div class="control">
+                                                    <button class="button is-success">Submit</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    {% else %}
+                                        <p>Please sign in to add review!</p>
+                                    {% endif %}
+                                </div>
+
+                            </div>
+                            <!-- reviews end -->
                     </div>
                 </div>
             </div>
