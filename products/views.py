@@ -79,6 +79,21 @@ def product_details(request, product_id):
     return render(request, 'products/product_details.html', context)
 
 
+#@login_required
+#def delete_review(request):
+#    """ A view to show individual product details """
+#
+#    if not request.user == review.user:
+#        messages.error(request, 'You are not authorised to perform this action.')
+#        return redirect(reverse('home'))
+#
+#    product_review = get_object_or_404(ProductReview)
+#    product_review.delete()
+#    messages.success(request, 'Your review was deleted!')
+#
+#    return render(request, 'products/product_details.html')
+
+
 @login_required
 def add_product(request):
     """ Add a product to the store """

@@ -33,6 +33,10 @@ h1, h2, h3, h4, h5, h6, .category-badge {
     color: #000 !important;
 }
 
+.small-text {
+    font-size: smaller;
+}
+
 .home-image-all {
     background: url('/media/ross_castle_home.jpeg') ;
     height: 300px;
@@ -323,12 +327,30 @@ input[name='q']::placeholder {
 }
 
 .copyright-row {
-    background-color: #eca50b;
+    background-color: rgb(236, 165, 11);
     color: rgb(0, 0, 0);
 }
 
 .social-icons a {
     padding: 5vw;
+}
+
+.reviews-container {
+    height: 220px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #20a73d3d;
+    padding: 9px;
+}
+
+.reviews-container textarea {
+    height: 120px;
+}
+
+.ratings-container {
+    height: 90px;
+    background-color: #20a73d3d;
+    padding: 9px;
 }
 
 /* fixed top navbar only on medium and up */
@@ -361,6 +383,16 @@ input[name='q']::placeholder {
     #shipping-threshold h4 {
         font-size: 1.2rem;
         padding-top: 5px;
+    }
+
+    .product-detail-col {
+        padding: 7%;
+    }
+
+    .product-reviews-col {
+        text-align: right;
+        padding: 7%;
+        
     }
 }
 
