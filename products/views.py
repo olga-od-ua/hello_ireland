@@ -66,8 +66,10 @@ def product_details(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    reviews_count = ProductReview.objects.filter(product=product).count()
     context = {
         'product': product,
+        'reviews_count': reviews_count,
     }
 
     return render(request, 'products/product_details.html', context)
@@ -166,4 +168,10 @@ def add_review(request, product_id):
     }
 
     return render(request, template, context)
-    
+
+
+def delete_review(request, product_id):
+    review = ProductReview.objects.filter(pk=product_id).last()
+    current_product_id = review.product.id
+    review.delete()
+    return redirect(reverse('product_details', args=[current_product_id]))
