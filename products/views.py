@@ -64,34 +64,11 @@ def product_details(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
-    if request.method == 'POST' and request.user.is_authenticated:
-        rating = request.POST.get('rating', 5)
-        review_text = request.POST.get('review_text', '')
-
-        review = ProductReview.objects.create(product=product, user=request.user, rating=rating, review_text=review_text)
-
-        return redirect(reverse('product_details', args=[product.id]))
-
     context = {
         'product': product,
     }
 
     return render(request, 'products/product_details.html', context)
-
-
-#@login_required
-#def delete_review(request):
-#    """ A view to show individual product details """
-#
-#    if not request.user == review.user:
-#        messages.error(request, 'You are not authorised to perform this action.')
-#        return redirect(reverse('home'))
-#
-#    product_review = get_object_or_404(ProductReview)
-#    product_review.delete()
-#    messages.success(request, 'Your review was deleted!')
-#
-#    return render(request, 'products/product_details.html')
 
 
 @login_required
