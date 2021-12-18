@@ -1,6 +1,8 @@
 from django import forms
-from .models import Product, Category
+from django.forms import ModelForm
+from .models import Product, Category, ProductReview
 from .widgets import CustomClearableFileInput
+
 
 
 class ProductForm(forms.ModelForm):
@@ -25,10 +27,20 @@ class ProductReviewForm(forms.ModelForm):
 
     class Meta:
         model = ProductReview
-        
         fields = ('rating', 'review_message',)
+
+        RATING_CHOICES = (
+                ('', 'Please rate the product where 1 is the lowest and 5 is the highest'),
+                ('1', '1'),
+                ('2', '2'),
+                ('3', '3'),
+                ('4', '4'),
+                ('5', '5'),
+                )
+
         widgets = {
             'review_message': forms.Textarea(attrs={'class': 'form-control'}),
+            'rating': forms.Select(choices=RATING_CHOICES, attrs={'class': 'form-control'}),
         }
         labels = {
             'review_message': 'Please leave your review here:',
