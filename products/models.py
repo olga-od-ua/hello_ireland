@@ -20,7 +20,7 @@ class Category(models.Model):
 class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
-    name = models.CharField(max_length=254)
+    name = models.CharField(max_length=254, null=False, blank=False)
     location = models.CharField(max_length=254)
     description = models.TextField()
     has_frame_sizes = models.BooleanField(default=False, null=True, blank=True)
@@ -43,7 +43,10 @@ class Product(models.Model):
 
 class ProductReview(models.Model):
     product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
-    user = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE)
-    rating = models.IntegerField()
-    review_text = models.TextField(blank=True, null=True)
+    user_name = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE)
+    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    review_message = models.TextField(blank=True, null=True)
     date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return '%s - %s' % (self.product.name, self.user_name)
