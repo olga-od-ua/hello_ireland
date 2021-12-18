@@ -130,7 +130,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- reviews
+                            <!-- reviews -->
                             <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5 product-reviews-col">
                                 <h4>Reviews</h4>
                                 <div class="reviews-container shadow p-3 mb-3">
@@ -189,34 +189,7 @@
                                 </div>
 
                             </div>
-                            reviews end -->
-
-                            <!-- Reviews Type2 -->
-                            <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5 product-reviews-col">
-                                <h4>Reviews</h4>
-                                <div class="reviews-container shadow p-3 mb-3">
-                                    {% for review in product.reviews.all %}
-                                        <div class="text-dark">
-                                            
-                                            <p><strong>Rating: </strong>{{ review.rating }}</p>
-                                            <p>{{ review.review_message }}</p>
-                                            <p class="small-text">Added by: <i><strong>{{ review.user_name }}</strong></i>
-                                            on {{ review.date_added|date:"d-M-Y" }}</p>
-                                            <hr>
-                                        </div>
-                                    {% empty %}
-                                        <div class="text-dark">Be the first one to leave a review</div>
-                                    {% endfor %}
-                                </div>
-                                <div class="text-dark mt-5">
-                                    <p><a href="{% url 'add_review' product.id %}" class="btn btn-black rounded-0 text-uppercase mb-4">Add a review</a></p>
-                                </div>
-
-                            </div>    
-
-
-
-                            <!-- Reviews Type2 end -->
+                            <!-- reviews end -->
                     </div>
                 </div>
             </div>

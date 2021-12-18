@@ -3,11 +3,9 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from datetime import datetime
-from django.contrib.auth.models import User
 
 from .models import Product, Category, ProductReview
-from .forms import ProductForm, ProductReviewForm
+from .forms import ProductForm
 
 
 # Create your views here.
@@ -66,13 +64,13 @@ def product_details(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
-    # if request.method == 'POST' and request.user.is_authenticated:
-    #     rating = request.POST.get('rating', 5)
-    #     review_text = request.POST.get('review_text', '')
+    if request.method == 'POST' and request.user.is_authenticated:
+        rating = request.POST.get('rating', 5)
+        review_text = request.POST.get('review_text', '')
 
-    #     review = ProductReview.objects.create(product=product, user=request.user, rating=rating, # review_text=review_text)
+        review = ProductReview.objects.create(product=product, user=request.user, rating=rating, review_text=review_text)
 
-    #    return redirect(reverse('product_details', args=[product.id]))
+        return redirect(reverse('product_details', args=[product.id]))
 
     context = {
         'product': product,
@@ -81,31 +79,19 @@ def product_details(request, product_id):
     return render(request, 'products/product_details.html', context)
 
 
-def add_review(request, product_id):
-    product = get_object_or_404(Product, pk=product_id)
-    if request.method == "POST":
-        form = ProductReviewForm(request.POST)
-
-        if form.is_valid():
-            form = ProductReviewForm(request.POST)
-            review = form.save(commit=False)
-            review.user_name = request.user
-            review.product = product
-            review.save()
-            messages.success(request, f'Review successfully submitted for {product.name}')
-            return redirect(reverse('product_details', args=[product.id]))
-        else:
-            messages.error(request, 'Ensure the form is valid.')
-    else:
-        form = ProductReviewForm()
-        messages.info(request, f'You are reviewing {product.name}')
-
-    template = 'products/add_review.html'
-    context = {
-        'form': form,
-    }
-
-    return render(request, template, context)
+#@login_required
+#def delete_review(request):
+#    """ A view to show individual product details """
+#
+#    if not request.user == review.user:
+#        messages.error(request, 'You are not authorised to perform this action.')
+#        return redirect(reverse('home'))
+#
+#    product_review = get_object_or_404(ProductReview)
+#    product_review.delete()
+#    messages.success(request, 'Your review was deleted!')
+#
+#    return render(request, 'products/product_details.html')
 
 
 @login_required
