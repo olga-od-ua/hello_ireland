@@ -336,7 +336,7 @@ input[name='q']::placeholder {
 }
 
 .reviews-container {
-    height: 220px;
+    height: 300px;
     overflow-x: hidden;
     overflow-y: auto;
     background-color: #20a73d3d;
@@ -345,12 +345,6 @@ input[name='q']::placeholder {
 
 .reviews-container textarea {
     height: 150px;
-}
-
-.review-body {
-    height: 50px;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 .ratings-container {

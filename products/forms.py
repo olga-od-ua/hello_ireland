@@ -39,7 +39,10 @@ class ProductReviewForm(forms.ModelForm):
                 )
 
         widgets = {
-            'review_message': forms.Textarea(attrs={'class': 'form-control'}),
+            'review_message': forms.Textarea(attrs={
+                'class': 'form-control',
+                'maxlength': '200',
+                }),
             'rating': forms.Select(choices=RATING_CHOICES, attrs={'class': 'form-control'}),
         }
         labels = {
