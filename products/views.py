@@ -170,8 +170,10 @@ def add_review(request, product_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_review(request, product_id):
-    review = ProductReview.objects.filter(pk=product_id).last()
-    current_product_id = review.product.id
+    """ Delete a review the logged in user submitted"""
+    review = get_object_or_404(ProductReview, pk=product_id)
     review.delete()
-    return redirect(reverse('product_details', args=[current_product_id]))
+    messages.success(request, f'Review deleted!')
+    return redirect(reverse('product_details', args=[review.product.id]))

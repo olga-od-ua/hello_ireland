@@ -198,9 +198,13 @@
                                         <div class="text-dark">
 
                                             <p><strong>Rating: </strong>{{ review.rating }}</p>
-                                            <p>{{ review.review_message }}</p>
+                                            <p class="review-body">{{ review.review_message }}</p>
                                             <p class="small-text">Added by: <i><strong>{{ review.user_name }}</strong></i>
                                             on {{ review.date_added|date:"d-M-Y" }}</p>
+                                            <!-- Delete your review -->
+                                            {% if review.user_name.username == request.user.username %}
+                                                <p><a href="{% url 'delete_review' review.id %}" class="btn btn-danger rounded-0 text-uppercase mb-4">Delete your review</a></p>
+                                            {% endif %}
                                             <hr>
                                         </div>
                                     {% empty %}
@@ -208,7 +212,11 @@
                                     {% endfor %}
                                 </div>
                                 <div class="text-dark mt-5">
-                                    <p><a href="{% url 'add_review' product.id %}" class="btn btn-black rounded-0 text-uppercase mb-4">Add a review</a></p>
+                                    {% if request.user.is_authenticated %}
+                                        <p><a href="{% url 'add_review' product.id %}" class="btn btn-black rounded-0 text-uppercase mb-4">Add a review</a></p>
+                                    {% else %}
+                                        <p>Please log in to add review!</p>
+                                    {% endif %}
                                 </div>
 
                             </div>    

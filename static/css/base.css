@@ -344,7 +344,13 @@ input[name='q']::placeholder {
 }
 
 .reviews-container textarea {
-    height: 120px;
+    height: 150px;
+}
+
+.review-body {
+    height: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .ratings-container {
