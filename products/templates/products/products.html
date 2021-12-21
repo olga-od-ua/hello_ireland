@@ -105,19 +105,19 @@
                                                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.calc_rating|floatformat:1 }} / 5</small>
                                                     {% endif %}
                                                     {% if request.user.is_superuser %}
-                                                        <small class="ml-3">
-                                                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                                        </small>
+                                                    <br>
+                                                    <p class="small mt-1 mb-0">
+                                                        <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                                    </p>
                                                     {% endif %}
                                                 <div class="row">
-                                                    <div class="col">
-                                                <a href="#" class="card-link">Buy</a>
-                                            </div>
-                                            <div class="col">
-                                                <a href="#" class="card-link">Save for later</a>
-                                            </div>
-                                            </div>
+                                                    <p class="ml-3">
+                                                    <a href="{% url 'product_details' product.id %}" class="card-link btn btn-details rounded-0 text-uppercase mt-2">Details</a>
+                                                
+                                                    <a href="#" class="card-link btn btn-favourites rounded-0 text-uppercase mt-2"><i class="far fa-heart"></i></a>
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>    
                                     </div>    

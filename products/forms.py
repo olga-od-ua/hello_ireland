@@ -11,7 +11,7 @@ class ProductForm(forms.ModelForm):
         fields = '__all__'
 
     image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
-    
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()
@@ -42,7 +42,9 @@ class ProductReviewForm(forms.ModelForm):
                 'class': 'form-control',
                 'maxlength': '200',
                 }),
-            'rating': forms.Select(choices=RATING_CHOICES, attrs={'class': 'form-control', 'required': True}),
+            'rating': forms.Select(choices=RATING_CHOICES, attrs={
+                'class': 'form-control',
+                'required': True}),
         }
         labels = {
             'review_message': 'Please leave your review here:',
