@@ -4,7 +4,6 @@ from .models import Product, Category, ProductReview
 from .widgets import CustomClearableFileInput
 
 
-
 class ProductForm(forms.ModelForm):
 
     class Meta:
@@ -43,7 +42,7 @@ class ProductReviewForm(forms.ModelForm):
                 'class': 'form-control',
                 'maxlength': '200',
                 }),
-            'rating': forms.Select(choices=RATING_CHOICES, attrs={'class': 'form-control'}),
+            'rating': forms.Select(choices=RATING_CHOICES, attrs={'class': 'form-control', 'required': True}),
         }
         labels = {
             'review_message': 'Please leave your review here:',
