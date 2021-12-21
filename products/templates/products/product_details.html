@@ -131,67 +131,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- reviews
-                            <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5 product-reviews-col">
-                                <h4>Reviews</h4>
-                                <div class="reviews-container shadow p-3 mb-3">
-                                    {% for review in product.reviews.all %}
-                                        <div class="text-dark">
-                                            <p><strong>Rating: </strong>{{ review.rating }}</p>
-                                            <p>{{ review.review_text }}</p>
-                                            <p class="small-text"><i>Date: {{ review.date_added|date:"d-m-Y" }}</i></p>
-                                            <hr>
-                                        </div>
-                                    {% empty %}
-                                        <div class="text-dark">Be the first one to leave a review</div>
-                                    {% endfor %}
-                                </div>
-
-                                <div class="text-dark mt-5">
-                                    {% if request.user.is_authenticated %}
-                                        <h5>Share your thoughts about this product</h5>
-                                        <form method="post" action="." id="review-form">
-                                            {% csrf_token %}
-                        
-                                            <div class="ratings-container shadow p-3 mb-3">
-                                            
-                        
-                                                <div>
-                                                    <label>Rating</label>
-                                                    <div class="select">
-                                                        <select name="rating">
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                            <option value="4">4</option>
-                                                            <option value="5" selected>5</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                        
-                                            <div class="reviews-container shadow p-3 mb-3">
-                                                <label>Review</label>
-                        
-                                                <div>
-                                                    <textarea class="textarea" name="review_text"></textarea>
-                                                </div>
-                                            </div>
-                        
-                                            <div>
-                                                <div>
-                                                    <button class="btn btn-black rounded-0 text-uppercase mb-4 a">Submit</button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    {% else %}
-                                        <p>Please sign in to add review!</p>
-                                    {% endif %}
-                                </div>
-
-                            </div>
-                             reviews end -->
-                             <!-- Reviews Type2 -->
                             <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5 product-reviews-col">
                                 <h4>Reviews ({{ reviews_count }})</h4>
                                 <div class="reviews-container shadow p-3 mb-3">
