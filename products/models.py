@@ -33,7 +33,7 @@ class Product(models.Model):
         return self.name
 
     def calc_rating(self):
-        total = sum(int(review['rating']) for review in self.reviews.values())
+        total = sum([int(review.rating) for review in self.reviews.all()])
 
         if self.reviews.count() > 0:
             return total / self.reviews.count()
@@ -43,7 +43,7 @@ class Product(models.Model):
 
 class ProductReview(models.Model):
     product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
-    user_name = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE)
+    user_name = models.ForeignKey(User, related_name='user_reviews', on_delete=models.CASCADE)
     rating = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True)
     review_message = models.TextField(blank=True, null=True)
     date_added = models.DateTimeField(auto_now_add=True)

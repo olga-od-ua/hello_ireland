@@ -126,8 +126,12 @@
                                                 {% endwith %}
                                             </div>
                                         </form>
-                                   
-                                        <a href="{% url 'add_to_favourites' product.id %}" class="card-link btn btn-favourites rounded-0 text-uppercase mt-2">Add to favourites  <i class="far fa-heart"></i></a>
+                                        
+                                            <a href="{% url 'add_to_favourites' product.id %}" class="card-link btn btn-favourites rounded-0 text-uppercase mt-2">Add to favourites  <i class="far fa-heart"></i></a>
+                                    
+                                            <!--<p>You can add this product to your favourites when you are logged in. <a href="{% url 'account_login' %}">Log in now</a></p>-->
+                                    
+
                                     </div>
                                 </div>
                             </div>
