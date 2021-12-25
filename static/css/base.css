@@ -349,7 +349,15 @@ input[name='q']::placeholder {
     color: #fff;
 }
 
-.btn-details:hover, .btn-favourites:hover {
+.btn-dlt-favourites {
+    font-weight: bold;
+    background-color: rgb(236, 165, 11);
+    color: #000;
+}
+
+.btn-details:hover,
+.btn-favourites:hover,
+.btn-dlt-favourites:hover {
     background-color: #fff;
     color: #000;
     border: #000 solid 2px;

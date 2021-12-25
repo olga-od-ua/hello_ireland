@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 
 from .models import Product, Category, ProductReview
 from .forms import ProductForm, ProductReviewForm
+from favourites.models import FavouriteProductsList, FavouriteProduct
 
 
 # Create your views here.
@@ -66,10 +67,16 @@ def product_details(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    favourites, created = FavouriteProductsList.objects.get_or_create(user=request.user)
+    fav = bool
+    if FavouriteProduct.objects.filter(favourites=favourites, product=product).exists():
+        fav = True
+
     reviews_count = ProductReview.objects.filter(product=product).count()
     context = {
         'product': product,
         'reviews_count': reviews_count,
+        'fav': fav,
     }
 
     return render(request, 'products/product_details.html', context)

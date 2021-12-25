@@ -20,6 +20,7 @@ def favourites(request):
     favourite products.
     """
     favourites = None
+
     try:
         favourites = FavouriteProductsList.objects.get(user=request.user)
     except FavouriteProductsList.DoesNotExist:
@@ -48,7 +49,7 @@ def add_to_favourites(request, product_id):
     else:
         favourites.products.add(product)
         messages.success(request, f'"{product.name}" added to Your Favourites! Don\'t forget to come back for it!')
-        return redirect(reverse('products/product_details.html', args=[product.id]))
+        return redirect(reverse('product_details', args=[product.id]))
 
 
 @login_required()
