@@ -1,3 +1,154 @@
+# Oh Hello Ireland
+
+![Logo](logo)
+
+Oh Hello Ireland is an online store that sells unique images of Ireland. When buying an image the customer receives all the copyrights for that particular image. Currently images are broken down into 5 main categories: Buildings, Landscapes, Portraits, Ocean & Sealife and Wildlife.
+
+Unlike other image stock online stores, Oh Hello Ireland sells images made by the best Irish photographers, meaning that all the objects in the images are presented through the eyes of true Irish people, reflecting their nature and culture.
+
+## [Oh Hello Ireland](https://oh-hello-ireland.herokuapp.com/)
+
+![Oh Hello Ireland](wireframes/home-responsive.png)
+
+# CONTENT QUICK LINKS
+## [UX](#wireframes)
+## [FEATURES](#implemented-features)
+## [SITEMAP](#sitemap-layout)
+## [DATABASE](#database-schema)
+## [TECHNOLOGIES](#technologies-used)
+## [TESTING](#testing)
+## [DEPLOYMENT](#deployment)
+## [CREDITS](#code-credits)
+## [ACKNOWLEDGEMENTS](#acknowledgements)
+## [DISCLAIMER](#disclaimer)
+
+# Wireframes
+
+
+
+# Implemented Features
+
+
+
+- REVIEWS. Any Site User can leave a review (or several reviews) on any product. There is no editing available in order to capture the thoughts of that specific reviewer at the time of the review and avoid having users to edit minor details of their reviews thus confusing other Site Users with contradicting information. Users, however, are allowed to delete their own reviews entirely.
+
+Every product details page displays all the reviews, the rating given at the time of the review, the review message, the date and the reviewer's username.
+
+## Future Features
+
+1. There is currently no sizes or dimensions information available, as well as no size or dimensions selection for an image available throughout the website. Due to time constraints these features have not been implemented yet and are planned to be implemented in the future. Frame sizes will become available when images can be sold in printed versions. It is also planned to display dimensions of digital images in the product details in the future.
+
+NB: it was initially planned to have 5 different frame sizes (A1, A2, A3, A4 and A5) and this can be traced in the website development history, however this feature was not worked through thouroughly enough to be presented in the final website version.
+
+2. Currently any authenticated user can leave a review for any product. As a future feature, it is planned to destinguish whether the reviewer bought the image they are reviewing in the past or whether they bought a different image or whether they have not made a purchase from the website yet.
+
+3. Currently any authenticated user can leave as many reviews as they like. In the future it is planned to put some restrictions in place (e.g. only one review per product or allowing to only review products that the user had bought in the past).
+
+4. As a future feature, it is planned to display all the reviews that a specific user left on the website on their account for their reference and management (i.e. deletion).
+
+5. Once there is a considerable number of reviews on one page at a time (e.g. more than 10-15) it is planned to implement pagination or other feature to make the reviews part of the website more readable and intuitive.
+
+
+
+
+
+# TECHNOLOGIES USED
+
+1. [Balsamiq](https://balsamiq.com/wireframes/)
+    - This technology helped my visualize my website before starting to write any code, which made the development process a lot more structured and logical.
+
+2. [HTML 5](https://en.wikipedia.org/wiki/HTML)
+    - HTML was used as the main mark up language.
+
+3. [CSS 3](https://en.wikipedia.org/wiki/CSS)
+    - CSS 3 was used to style the elements and create a more visually appealing website.
+
+4. [Javascript](https://www.javascript.com/)
+    - Javascript was used to to extend functionality of Django framework features and create other interactive facets.
+
+5. [Jquery](https://jquery.com/)
+    - Jquery, same as JavaScript, was used to to extend functionality of Django framework features and create other short-hand interactive facets.
+
+6. [Bootstrap 4.5](https://getbootstrap.com/docs/)
+    - Bootstrap was used for quick and easy style and layout solutions.
+
+7. [Font Awesome](https://fontawesome.com/)
+    - Fontawesome was used for all the icons of the website for aesthetic and UX purposes.
+
+8. [Gitpod](https://www.gitpod.io/)
+    - Git pod was used as an IDE workspace to write and run all the code and its changes. Git was used as a version control to commit and push all the code to the respective GitHub repository.
+
+9. [Github](https://github.com/)
+    - GitHub was used for storage of all the commits and code back up.
+
+10. [W3C HTML validator](https://validator.w3.org/)
+    - W3C validation service was used to ensure all the HTML code passed the validation.
+
+11. [W3C CSS validator](https://jigsaw.w3.org/css-validator/)
+    - W3C validation service was used to ensure all the HTML code passed the validation.
+
+12. [Jshint validator](https://jshint.com/)
+    - Jshint was used to ensure all JavaScript code passed validation.
+
+???13. [PEP8 validator](http://pep8online.com/)
+    - PEP8 online was used to ensure all python code passed all PEP8 industry standards.
+
+???14. [Python extends class validator](https://extendsclass.com/python-tester.html)
+    - extendsclass was used to ensure all python syntax passed validation.
+
+???15. [Lucid Chart](https://www.lucidchart.com/pages/)
+* Lucid chart was used to create the sitemap.
+
+???16. [db diagram](https://dbdiagram.io/home)
+* Db diagram was used to create the database schema.
+
+17. [PIP3](https://pip.pypa.io/en/stable/)
+- PIP3 was used to install all packaging tools.
+
+?????18. [Am I responsive](http://ami.responsivedesign.is/)
+* AM I responsive was used to create attractive screenshots from all devices to display on my README file.
+
+19. [Python3](https://www.python.org/download/releases/3.0/)
+    - Python was used as the backend programming language.
+
+20. [Django](https://www.djangoproject.com/)
+    - Django was used as the framework for all the backend functionality. All the backend database data is injected into the html templates using django template tags.
+
+21. [SQLite3](https://www.sqlite.org/index.html)
+    - SQLite was used as the default relational database.
+
+22. [Postgresql](https://www.postgresql.org/)
+    - Postgresql was used as the database for the deployed Oh Hello Ireland Heroku app.
+
+23. [Heroku](https://id.heroku.com/login)
+    - Heroku was used as the hosting platform for this project.
+
+24. [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+    - Chrome Developer Tools were used extensively during the development to ensure good responsiveness of the website and for debugging.
+
+???25. [WAVE web accessibility tool](https://wave.webaim.org/)
+* I used WAVE to make check any errors that my site may have which would effect users with hearing or visual disabilities.
+
+???26. [a11y](https://color.a11y.com/)
+
+
+???27. [CSS Autoprefixer](https://autoprefixer.github.io/)
+* I used Autoprefixer to ensure all of my css styles would work on all browsers.
+
+28. [Stripe](https://stripe.com/ie)
+    - Stipe test API was used to take secure test payments from customers in the Checkout app.
+
+29. [Amazon AWS](https://aws.amazon.com/)
+    - Amazon AWS was used for hosting all the static files for the purposes of improving the site's performance and scalability.
+
+30. [Cloudinary](https://cloudinary.com/)
+    - Cloudinary was used for storing the full-sized products' images as well as the favicon image.
+
+
+
+
+
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome olga-od-ua,
