@@ -126,10 +126,12 @@
                                                 {% endwith %}
                                             </div>
                                         </form>
-                                        {% if fav %}
-                                            <a href="{% url 'remove_from_favourites' product.id %}" class="btn btn-dlt-favourites rounded-0 mt-3" role="button"><i class="far fa-heart"></i> Remove From Favourites</a>
-                                        {% else %}
-                                            <a href="{% url 'add_to_favourites' product.id %}" class="card-link btn btn-favourites rounded-0 text-uppercase mt-2">Add to favourites  <i class="far fa-heart"></i></a>
+                                        {% if user.is_authenticated %}
+                                            {% if fav %}
+                                                <a href="{% url 'remove_from_favourites' product.id %}" class="btn btn-dlt-favourites rounded-0 mt-3" role="button"><i class="far fa-heart"></i> Remove From Favourites</a>
+                                            {% else %}
+                                                <a href="{% url 'add_to_favourites' product.id %}" class="card-link btn btn-favourites rounded-0 text-uppercase mt-2">Add to favourites  <i class="far fa-heart"></i></a>
+                                            {% endif %}
                                         {% endif %}
 
                                     </div>
