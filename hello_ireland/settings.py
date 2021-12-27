@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # DEBUG = 'DEVELOPMENT' in os.environ
 DEBUG = True
 
-ALLOWED_HOSTS = ['oh-hello-ireland.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['oh-hello-ireland.herokuapp.com', 'localhost', 'hello-ireland.herokuapp.com']
 
 
 # Application definition
@@ -134,6 +134,7 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
