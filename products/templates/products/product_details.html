@@ -42,7 +42,7 @@
                                             <div class="card-body pt-0">
                                                 <p class="text-dark"><strong>{{ product.name }}</strong></p>
                                                 <p class="text-dark">Location</p>
-                                                <p class="lead mb-2 text-left text-dark font-weight-bold">${{ product.price }}</p>
+                                                <p class="lead mb-2 text-left text-dark font-weight-bold">€{{ product.price }}</p>
                                                     {% if product.category %}
                                                     <p class="small mt-1 mb-2">
                                                         <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -85,6 +85,7 @@
                                                             <option value="a2">A2</option>
                                                             <option value="a3" selected>A3</option>
                                                             <option value="a4">A4</option>
+                                                            <option value="a4">A5</option>
                                                         </select>
                                                     </div>
                                                 {% endif %}

@@ -8,6 +8,7 @@ class ProductAdmin(admin.ModelAdmin):
         'name',
         'location',
         'category',
+        'has_frame_sizes',
         'price',
         'rating',
         'image',
