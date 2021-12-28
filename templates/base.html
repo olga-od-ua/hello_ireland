@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
         <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="https://res.cloudinary.com/djaujigfg/image/upload/v1640732081/shamrock_favicon_vo2dlx.jpg"/>
         {% endblock %}
 
         {% block extra_css %}
@@ -37,12 +38,12 @@
         <title>Oh, Hello Ireland! {% block extra_title %}{% endblock %}</title>
     </head>
 
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         <header class="container-fluid fixed-top">
             <div class="row border-top">
                 <div class="col navbar navbar-style">
                     
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light w-100 mx-auto navbar-style">
+                    <nav class="navbar navbar-expand-lg navbar-light w-100 mx-auto navbar-style">
                         {% include 'includes/mobile-top-header.html' %}
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -83,9 +84,7 @@
     {% block content %}
     {% endblock %}
 
-    <footer>
-        {% include 'includes/footer.html' %}
-    </footer>
+    {% include 'includes/footer.html' %}
 
     {% block postloadjs %}
         <script type="text/javascript">
