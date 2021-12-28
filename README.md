@@ -50,7 +50,7 @@ NB: it was initially planned to have 5 different frame sizes (A1, A2, A3, A4 and
 
 6. Social links in the footer were added for visual purposes only and do not carry out any critical functionality. They are currently linked to the home page of the respective website. In the future they will be redirecting the user to the appropriate destination. 
 
-
+7. Rating field will be removed from the Add a Product form and the ratings data will be taken from user reviews. As this feature is not implemented yet (once again due to time constraints), sorting by rating is not fully functioning. 
 
 # TECHNOLOGIES USED
 
