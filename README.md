@@ -48,7 +48,7 @@ NB: it was initially planned to have 5 different frame sizes (A1, A2, A3, A4 and
 
 5. Once there is a considerable number of reviews on one page at a time (e.g. more than 10-15) it is planned to implement pagination or other feature to make the reviews part of the website more readable and intuitive.
 
-
+6. Social links in the footer were added for visual purposes only and do not carry out any critical functionality. They are currently linked to the home page of the respective website. In the future they will be redirecting the user to the appropriate destination. 
 
 
 
