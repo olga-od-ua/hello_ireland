@@ -31,7 +31,8 @@
                     </h4>
                 </div>        
             </div>
-            <div class="col col-6 text-left home-image-products"><a href="{% url 'product_details' 28 %}"><img src="/media/ross_castle_home.jpeg" class="img-fluid rounded" alt="ross_castle"></div>
+            <div class="col col-6 text-left home-image-products">
+                <a href="{% url 'products' %}"><img src="{{ MEDIA_URL }}ross_castle_home.jpeg" class="img-fluid rounded" alt="ross_castle"></a></div>
         </div>
     </div>
 {% endblock %}
