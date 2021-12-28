@@ -13,25 +13,60 @@
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col col-md-9 justify-content-center bg-col">
-                <h3 class="text-center">About "Oh Hello Ireland!"</h3>
+                <h3 class="text-center">About Us</h3>
                 <div class="my-4 text-center">
-                    <p>About us info.</p>
+                    <p>We are a group of photographers from different corners of the Republic of Ireland. We love to share images of persons, places and things from all around Ireland. We are based in Galway and we have connections with photographers from all over Ireland so you can expect to find photos from any part of Ireland.</p>
                 </div>        
             </div>
-        </div>
-        <div class="row justify-content-evenly align-items-center row-home">
-            <div class="col col-6 col-sm-9 col-md-7 text-left bg-col">
-                <h4>Our reviews</h4>
-                <p>Reviews</p>
-                <div>
-                    <h4>
-                        <a href="#" class="buy-image-button btn btn-lg text-uppercase">
-                            Go to images
-                        </a>
-                    </h4>
-                </div>        
-            </div>
-            <div class="col col-6 text-left home-image-all"></div>
         </div>
     </div>
+
+        <div class="accordion about-accordion mx-auto mb-4" id="accordionExample">
+            <div class="card about-accord-card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-center text-dark" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <h4>Our reviews</h4>
+                </button>
+                </h2>
+            </div>
+        
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <div class="reviews-container shadow p-3 mb-3">
+                        {% for review in reviews %}
+                            <div class="text-dark">
+                                {% if review.rating == 5 %}
+                                <p><strong>Rating: </strong>{{ review.rating }}</p>
+                                <p class="review-body">{{ review.review_message }}</p>
+                                <p class="small-text">Added by: <i><strong>{{ review.user_name }}</strong></i>
+                                on {{ review.date_added|date:"d-M-Y" }}</p>
+                                <hr>
+                                {% endif %}
+                            </div>
+                        {% empty %}
+                            <div class="text-dark">Be the first one to leave a review</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+            <div class="card about-accord-card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                <button class="btn btn-link btn-block text-left text-center text-dark collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <h4>Our Photographers</h4>
+                </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                
+                </div>
+            </div>
+            </div>
+        </div>
+ 
 {% endblock %}
