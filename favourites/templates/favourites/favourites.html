@@ -12,7 +12,8 @@
 
 {% block content %}
 <div class="overlay"></div>
-<h2 class="text-center text-dark my-5">My Favourite Products</h2>
+
+<h2 class="text-center text-dark my-3">My Favourite Products</h2>
 
 {% if favourites %}
     {% for product in favourites.products.all %}
@@ -35,6 +36,17 @@
             </div>
         </div>
     </div>
+    {% empty %}
+    <div class="w-50 mx-auto justify-content-center align-items-center"><hr></div>
+    <h5 class="text-center text-dark mb-3">You don't have any favourite products yet. <br><br>Start browsing <a href="{% url 'products' %}" class="btn btn-black rounded-0 my-1"> now</a>. </h5>
+</div>
     {% endfor %}
 {% endif %}
+
+
+
+
+
+
+
 {% endblock %}

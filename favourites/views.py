@@ -20,6 +20,8 @@ def favourites(request):
     favourite products.
     """
     favourites = None
+    # product = get_object_or_404(Product)
+    # favourites_count = FavouriteProduct.objects.filter(favourites=favourites, product=product).count()
 
     try:
         favourites = FavouriteProductsList.objects.get(user=request.user)
@@ -63,5 +65,8 @@ def remove_from_favourites(request, product_id):
     favourites, created = FavouriteProductsList.objects.get_or_create(user=request.user)
     favourites.products.remove(product)
     messages.success(request, f'"{product.name}" removed from Your Favourites.')
-    return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
+    # favourites_count = FavouriteProduct.objects.filter(favourites=favourites, product=product).count()
+    # print(favourites_count)
+    
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])
