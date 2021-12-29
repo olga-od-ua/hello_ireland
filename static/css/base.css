@@ -37,6 +37,17 @@ h1, h2, h3, h4, h5, h6, .category-badge {
     margin-bottom: 25px;
 }
 
+.car-prev-btn, .car-next-btn {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.carousel-photographer-img {
+    max-height: 230px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
 .text-black {
     color: #000 !important;
 }
