@@ -6,7 +6,7 @@ Oh Hello Ireland is an online store that sells unique images of Ireland. When bu
 
 Unlike other image stock online stores, Oh Hello Ireland sells images made by the best Irish photographers, meaning that all the objects in the images are presented through the eyes of true Irish people, reflecting their nature and culture.
 
-## [Oh Hello Ireland](https://oh-hello-ireland.herokuapp.com/)
+## [Oh Hello Ireland](https://hello-ireland.herokuapp.com/)
 
 ![Oh Hello Ireland](wireframes/home-responsive.png)
 
