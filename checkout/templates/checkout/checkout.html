@@ -76,13 +76,13 @@
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <!-- User's name and email address -->
-                    <fieldset class="rounded px-3 mb-5">
+                    <fieldset class="rounded px-3 mb-3">
                         <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
                     <!-- Shipping information -->
-                    <fieldset class="rounded px-3 mb-5">
+                    <fieldset class="rounded px-3 mb-4">
                         <legend class="fieldset-label small text-black px-2 w-auto">Shipping</legend>
                         {{ order_form.phone_number | as_crispy_field }}
                         {{ order_form.country | as_crispy_field }}
@@ -91,7 +91,7 @@
                         {{ order_form.street_address1 | as_crispy_field }}
                         {{ order_form.street_address2 | as_crispy_field }}
                         {{ order_form.county | as_crispy_field }}
-                        <div class="form-check form-check-inline float-right mr-0">
+                        <div class="form-check form-check-inline float-left mr-0 mt-2">
 							{% if user.is_authenticated %}
 								<label class="form-check-label" for="id-save-info">Save this shipping information to my profile</label>
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>

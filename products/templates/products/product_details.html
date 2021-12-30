@@ -61,6 +61,15 @@
                                                         <a class="text-dark" href="{% url 'edit_product' product.id %}">Edit</a> | 
                                                         <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                                     </p>
+
+                                                    <p>{% if user.is_authenticated %}
+                                            {% if fav %}
+                                                <a href="{% url 'remove_from_favourites' product.id %}" class="btn btn-dlt-favourites rounded-0 my-3" role="button">Remove From Favourites  <i class="fas fa-heart"></i></a>
+                                            {% else %}
+                                                <a href="{% url 'add_to_favourites' product.id %}" class="card-link btn btn-favourites rounded-0 my-3">Add to favourites  <i class="far fa-heart"></i></a>
+                                            {% endif %}
+                                        {% endif %}</p>
+
                                             {% endif %}
                                             </div>
                                         </div>    
@@ -111,33 +120,27 @@
                                                     </div>
                                                 </div>
                     
-                                                <div class="col mb-4">
-                                                    <a href="{% url 'products' %}" class="btn rounded-0 mt-5">
+                                                <div class="mb-3 mt-2">
+                                                    <a href="{% url 'products' %}" class="btn rounded-0">
                                                         <span class="icon">
                                                             <i class="fas fa-chevron-left"></i>
                                                         </span>
                                                         <span class="text-uppercase">Keep Shopping</span>
                                                     </a>
-                                                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                                    <input type="submit" class="btn btn-black rounded-0 text-uppercase" value="Add to Bag">
                                                 </div>
                                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                                 {% endwith %}
                                             </div>
                                         </form>
-                                        {% if user.is_authenticated %}
-                                            {% if fav %}
-                                                <a href="{% url 'remove_from_favourites' product.id %}" class="btn btn-dlt-favourites rounded-0 mt-3" role="button"><i class="far fa-heart"></i> Remove From Favourites</a>
-                                            {% else %}
-                                                <a href="{% url 'add_to_favourites' product.id %}" class="card-link btn btn-favourites rounded-0 text-uppercase mt-2">Add to favourites  <i class="far fa-heart"></i></a>
-                                            {% endif %}
-                                        {% endif %}
 
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5 product-reviews-col">
-                                <h4>Reviews ({{ reviews_count }})</h4>
-                                <div class="reviews-container shadow p-3 mb-3">
+                                <hr>
+                                <h4 class="float-md-right">Reviews ({{ reviews_count }})</h4>
+                                <div class="reviews-container shadow p-3 mb-3 float-md-right">
                                     {% for review in product.reviews.all %}
                                         <div class="text-dark">
 
@@ -155,14 +158,14 @@
                                         <div class="text-dark">Be the first one to leave a review</div>
                                     {% endfor %}
                                 </div>
-                                <div class="text-dark mt-5">
+                                <div class="text-dark mt-2 float-md-right">
                                     {% if request.user.is_authenticated %}
-                                        <p><a href="{% url 'add_review' product.id %}" class="btn btn-black rounded-0 text-uppercase mb-4">Add a review</a></p>
+                                        <p><a href="{% url 'add_review' product.id %}" class="btn btn-black rounded-0 text-uppercase mb-2">Add a review</a></p>
                                     {% else %}
                                         <p>Please <a href="{% url 'account_login' %}">log in</a> to add a review!</p>
                                     {% endif %}
                                 </div>
-
+                                
                             </div>    
 
 

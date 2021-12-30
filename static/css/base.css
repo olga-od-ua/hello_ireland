@@ -355,13 +355,13 @@ input[name='q']::placeholder {
 }
 
 .btn-favourites {
-    font-weight: bold;
+    font-size: small;
     background-color: #20a73d;
     color: #fff;
 }
 
 .btn-dlt-favourites {
-    font-weight: bold;
+    font-size: small;
     background-color: rgb(236, 165, 11);
     color: #000;
 }
@@ -444,18 +444,18 @@ input[name='q']::placeholder {
     }
 }
 
-.product-mngmt-field {
+.product-mngmt-field,
+.checkout-form-field,
+.profile-form-field {
     width: 270px;
     margin-bottom: 9px;
     margin-top: -4px;
     border: 1px solid black !important;
 }
 
-.checkout-form-field {
-    width: 270px;
-    margin-bottom: 9px;
-    margin-top: -4px;
-    border: 1px solid black !important;
+.product-mngmt-field:focus {
+    border-color: #000 !important;
+    border-radius: 0 !important;
 }
 
 /* pad the top when navbar is collapsed on mobile */

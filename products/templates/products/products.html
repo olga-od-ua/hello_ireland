@@ -44,9 +44,9 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 order-md-first">
-                    <p class="text-muted mt-3 text-center text-md-left">
+                    <p class="text-muted mt-3 ml-2 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
-                            <span class="small"><a href="{% url 'products' %}?category=buildings,landscapes,portraits,ocean_and_sea_life,wildlife" class="btn btn-outline-black rounded-0">Back to All Products</a></span>
+                            <span class="small mr-3"><a href="{% url 'products' %}" class="btn btn-outline-black rounded-0">Back to All Products</a></span>
                         {% endif %}
                         {{ products|length }} Products {% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                     </p>
