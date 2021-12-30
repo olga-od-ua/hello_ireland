@@ -26,7 +26,7 @@
                 <div class="col-md-8">
                     <div class="card-body">
                         <h3 class="card-title">{{ product.name }}</h3>
-                        <p class="text-dark">{{ product.location }}</p>
+                        <p class="text-dark"><i class="fas fa-map-marker-alt"></i> {{ product.location }}</p>
                         {% if product.category %}
                             <p class="small mt-1 mb-2">
                                 <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">

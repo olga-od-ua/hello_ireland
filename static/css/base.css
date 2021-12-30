@@ -444,6 +444,20 @@ input[name='q']::placeholder {
     }
 }
 
+.product-mngmt-field {
+    width: 270px;
+    margin-bottom: 9px;
+    margin-top: -4px;
+    border: 1px solid black !important;
+}
+
+.checkout-form-field {
+    width: 270px;
+    margin-bottom: 9px;
+    margin-top: -4px;
+    border: 1px solid black !important;
+}
+
 /* pad the top when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {

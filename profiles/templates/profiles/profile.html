@@ -59,7 +59,7 @@
                                             {% for item in order.lineitems.all %}
                                                 <li class="small">
                                                     {% if item.product.has_frame_sizes %}
-                                                        Size {{ item.product.size|upper }}
+                                                        Size {{ item.product_size|upper }}
                                                     {% endif %}{{ item.product.name }} x{{ item.quantity }}
                                                 </li>
                                             {% endfor %}
@@ -79,4 +79,5 @@
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript" src="{% static 'profiles/js/country_field.js' %}"></script>
+        
 {% endblock %}
