@@ -1,3 +1,6 @@
+""" Views to view the shooping bag,
+adjust quantity of items in the shopping bag,
+delete items from the shopping bag """
 from django.shortcuts import (
     render, redirect, reverse, HttpResponse, get_object_or_404
 )
@@ -30,22 +33,27 @@ def add_to_bag(request, item_id):
         if item_id in list(shopping_bag.keys()):
             if size in shopping_bag[item_id]['items_by_size'].keys():
                 shopping_bag[item_id]['items_by_size'][size] += quantity
-                messages.success(
-                    request, f'Updated frame size {size.upper()} {product.name} quantity to {shopping_bag[item_id]["items_by_size"][size]}')
+                messages.success(request,
+                                 (f'Updated frame size {size.upper()} '
+                                  f'{product.name} quantity to '
+                                  f'{shopping_bag[item_id]["items_by_size"][size]}'))
             else:
                 shopping_bag[item_id]['items_by_size'][size] = quantity
-                messages.success(
-                    request, f'Added {product.name} with frame {size.upper()} to your shopping bag')
+                messages.success(request,
+                                 (f'Added {product.name} with frame '
+                                  f'{size.upper()} to your shopping bag'))
         else:
             shopping_bag[item_id] = {'items_by_size': {size: quantity}}
-            messages.success(
-                request, f'Added {product.name} with frame {size.upper()} to your shopping bag')
+            messages.success(request,
+                             (f'Added {product.name} with frame '
+                              f'{size.upper()} to your shopping bag'))
 
     else:
         if item_id in list(shopping_bag.keys()):
             shopping_bag[item_id] += quantity
-            messages.success(
-                request, f'Updated {product.name} quantity to {shopping_bag[item_id]}')
+            messages.success(request,
+                             (f'Updated {product.name} quantity to '
+                              f'{shopping_bag[item_id]}'))
         else:
             shopping_bag[item_id] = quantity
             messages.success(
@@ -68,19 +76,23 @@ def adjust_bag(request, item_id):
     if size:
         if quantity > 0:
             shopping_bag[item_id]['items_by_size'][size] = quantity
-            messages.success(
-                    request, f'Updated frame size {size.upper()} {product.name} quantity to {shopping_bag[item_id]["items_by_size"][size]}')
+            messages.success(request,
+                             (f'Updated frame size {size.upper()} '
+                              f'{product.name} quantity to '
+                              f'{shopping_bag[item_id]["items_by_size"][size]}'))
         else:
             del shopping_bag[item_id]['items_by_size'][size]
             if not shopping_bag[item_id]['items_by_size']:
                 shopping_bag.pop(item_id)
-            messages.success(
-                    request, f'Removed {product.name} with frame {size.upper()} from your shopping bag')
+            messages.success(request,
+                             (f'Removed {product.name} with frame '
+                              f'{size.upper()} from your shopping bag'))
     else:
         if quantity > 0:
             shopping_bag[item_id] = quantity
-            messages.success(
-                request, f'Updated {product.name} quantity to {shopping_bag[item_id]}')
+            messages.success(request,
+                             (f'Updated {product.name} quantity to '
+                              f'{shopping_bag[item_id]}'))
         else:
             shopping_bag.pop(item_id)
             messages.success(
@@ -104,8 +116,9 @@ def remove_from_bag(request, item_id):
             del shopping_bag[item_id]['items_by_size'][size]
             if not shopping_bag[item_id]['items_by_size']:
                 shopping_bag.pop(item_id)
-            messages.success(
-                    request, f'Removed {product.name} with frame {size.upper()} from your shopping bag')
+            messages.success(request,
+                             (f'Removed {product.name} with frame '
+                              f'{size.upper()} from your shopping bag'))
         else:
             shopping_bag.pop(item_id)
             messages.success(
