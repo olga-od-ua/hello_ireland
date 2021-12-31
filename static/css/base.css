@@ -260,11 +260,21 @@ input[name='q']::placeholder {
 .allauth-form-inner-content input {
     border-color: #000;
     border-radius: 0;
+    width: 270px;
+    margin-bottom: 9px;
+    margin-top: -4px;
+    border: 1px solid black !important;
+}
+
+#id_remember {
+    width: 30px;
+    color: black;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
     display: none;
 }
+
 
 .allauth-form-inner-content input::placeholder {
     color: #aab7c4;
@@ -451,11 +461,6 @@ input[name='q']::placeholder {
     margin-bottom: 9px;
     margin-top: -4px;
     border: 1px solid black !important;
-}
-
-.product-mngmt-field:focus {
-    border-color: #000 !important;
-    border-radius: 0 !important;
 }
 
 /* pad the top when navbar is collapsed on mobile */
