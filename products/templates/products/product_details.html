@@ -56,21 +56,21 @@
                                                     {% else %}
                                                         <p class="small-text text-muted mb-2"><i class="fas fa-star mr-1"></i>{{ product.calc_rating|floatformat:1 }} / 5</p>
                                                     {% endif %}
+
                                                     {% if request.user.is_superuser %}
                                                     <p class="small-text mb-1">    
                                                         <a class="text-dark" href="{% url 'edit_product' product.id %}">Edit</a> | 
                                                         <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                                                     </p>
+                                                    {% endif %}
 
                                                     <p>{% if user.is_authenticated %}
-                                            {% if fav %}
-                                                <a href="{% url 'remove_from_favourites' product.id %}" class="btn btn-dlt-favourites rounded-0 my-3" role="button">Remove From Favourites  <i class="fas fa-heart"></i></a>
-                                            {% else %}
-                                                <a href="{% url 'add_to_favourites' product.id %}" class="card-link btn btn-favourites rounded-0 my-3">Add to favourites  <i class="far fa-heart"></i></a>
-                                            {% endif %}
-                                        {% endif %}</p>
-
-                                            {% endif %}
+                                                        {% if fav %}
+                                                            <a href="{% url 'remove_from_favourites' product.id %}" class="btn btn-dlt-favourites rounded-0 my-3" role="button">Remove From Favourites  <i class="fas fa-heart"></i></a>
+                                                        {% else %}
+                                                            <a href="{% url 'add_to_favourites' product.id %}" class="card-link btn btn-favourites rounded-0 my-3">Add to favourites  <i class="far fa-heart"></i></a>
+                                                        {% endif %}
+                                                    {% endif %}</p>
                                             </div>
                                         </div>    
                                     </div>
