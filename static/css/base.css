@@ -455,7 +455,6 @@ input[name='q']::placeholder {
 }
 
 .product-mngmt-field,
-.checkout-form-field,
 .profile-form-field {
     width: 270px;
     margin-bottom: 9px;

@@ -1,11 +1,14 @@
+""" A module for all views related to
+About Us page and functionality """
 from django.shortcuts import render
 
-from products.models import ProductReview, Product
+from products.models import ProductReview
+
 
 # Create your views here.
-""" A view to render the About Us page """
-
 def about(request):
+    """ A view to render the About Us page """
+
     reviews = ProductReview.objects.all()
 
     context = {

@@ -64,3 +64,10 @@ select option[value=""] {
     margin: 0;
     height: 100%;
 }
+
+.checkout-form-field {
+    width: 270px;
+    margin-bottom: 9px;
+    margin-top: -4px;
+    border: 1px solid black !important;
+}
