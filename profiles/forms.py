@@ -1,3 +1,4 @@
+""" A Module to customise forms for Profile app """
 from django import forms
 from .models import UserProfile
 
