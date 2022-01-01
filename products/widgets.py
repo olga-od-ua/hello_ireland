@@ -1,8 +1,12 @@
+""" A Module for customising widgets related to
+a single product """
 from django.forms.widgets import ClearableFileInput
 from django.utils.translation import gettext_lazy as _
 
 
 class CustomClearableFileInput(ClearableFileInput):
+    """ A class to customise the image uploading
+    when adding a new product """
     clear_checkbox_label = _('Remove')
     initial_text = _('Current Image')
     input_text = _('')

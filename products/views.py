@@ -1,3 +1,5 @@
+""" A Module for views that render various product
+related functionality """
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -45,7 +47,8 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request,
+                               "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
@@ -89,7 +92,8 @@ def product_details(request, product_id):
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
-        messages.error(request, 'You are not authorised to perform this action.')
+        messages.error(request,
+                       'You are not authorised to perform this action.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -99,7 +103,9 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_details', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to add product. '
+                           'Please ensure the form is valid.')
     else:
         form = ProductForm()
 
@@ -115,7 +121,8 @@ def add_product(request):
 def edit_product(request, product_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
-        messages.error(request, 'You are not authorised to perform this action.')
+        messages.error(request,
+                       'You are not authorised to perform this action.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -126,7 +133,9 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_details', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request,
+                           'Failed to update product. '
+                           'Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -144,7 +153,8 @@ def edit_product(request, product_id):
 def delete_product(request, product_id):
     """ Delete a product from the store """
     if not request.user.is_superuser:
-        messages.error(request, 'You are not authorised to perform this action.')
+        messages.error(request,
+                       'You are not authorised to perform this action.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -154,6 +164,8 @@ def delete_product(request, product_id):
 
 
 def add_review(request, product_id):
+    """ Add a review for a single product
+    from the Product details page """
     product = get_object_or_404(Product, pk=product_id)
     if request.method == "POST":
         form = ProductReviewForm(request.POST)
@@ -164,7 +176,9 @@ def add_review(request, product_id):
             review.user_name = request.user
             review.product = product
             review.save()
-            messages.success(request, f'Review successfully submitted for {product.name}')
+            messages.success(request,
+                             'Review successfully submitted '
+                             f'for {product.name}')
             return redirect(reverse('product_details', args=[product.id]))
         else:
             messages.error(request, 'Ensure the form is valid.')
@@ -185,5 +199,5 @@ def delete_review(request, product_id):
     """ Delete a review the logged in user submitted"""
     review = get_object_or_404(ProductReview, pk=product_id)
     review.delete()
-    messages.success(request, f'Review deleted!')
+    messages.success(request, 'Review deleted!')
     return redirect(reverse('product_details', args=[review.product.id]))
