@@ -1,3 +1,5 @@
+""" A Module for Models related to
+the Favourites app """
 from django.db import models
 from django.contrib.auth.models import User
 from products.models import Product
@@ -9,6 +11,7 @@ class FavouriteProductsList(models.Model):
     This model represents a list of
     favourite products of a given user.
     """
+
     user = models.OneToOneField(
         User,
         null=False,

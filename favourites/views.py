@@ -8,7 +8,6 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from products.models import Product
-from profiles.models import UserProfile
 from .models import FavouriteProductsList, FavouriteProduct
 
 
@@ -20,8 +19,6 @@ def favourites(request):
     favourite products.
     """
     favourites = None
-    # product = get_object_or_404(Product)
-    # favourites_count = FavouriteProduct.objects.filter(favourites=favourites, product=product).count()
 
     try:
         favourites = FavouriteProductsList.objects.get(user=request.user)
@@ -46,11 +43,15 @@ def add_to_favourites(request, product_id):
     favourites, created = FavouriteProductsList.objects.get_or_create(user=request.user)
 
     if FavouriteProduct.objects.filter(favourites=favourites, product=product).exists():
-        messages.error(request, f'"{product.name}" is already in your "Favourites List"')
+        messages.error(request,
+                       f'"{product.name}" is already in your '
+                       '"Favourites List"')
         return redirect(reverse('product_details', args=[product.id]))
     else:
         favourites.products.add(product)
-        messages.success(request, f'"{product.name}" added to Your Favourites! Don\'t forget to come back for it!')
+        messages.success(request,
+                         f'"{product.name}" added to Your Favourites! '
+                         'Don\'t forget to come back for it!')
         return redirect(reverse('product_details', args=[product.id]))
 
 
@@ -64,9 +65,7 @@ def remove_from_favourites(request, product_id):
 
     favourites, created = FavouriteProductsList.objects.get_or_create(user=request.user)
     favourites.products.remove(product)
-    messages.success(request, f'"{product.name}" removed from Your Favourites.')
+    messages.success(request,
+                     f'"{product.name}" removed from Your Favourites.')
 
-    # favourites_count = FavouriteProduct.objects.filter(favourites=favourites, product=product).count()
-    # print(favourites_count)
-    
     return HttpResponseRedirect(request.META['HTTP_REFERER'])

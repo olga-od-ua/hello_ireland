@@ -1,3 +1,4 @@
+""" A module to generate url paths for Favourites app """
 from django.urls import path
 from . import views
 
