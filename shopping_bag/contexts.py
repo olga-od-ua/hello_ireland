@@ -1,3 +1,5 @@
+""" A Module for context processors
+for the Shopping Bag app """
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
@@ -5,7 +7,10 @@ from products.models import Product
 
 
 def shopping_bag_contents(request):
-
+    """ A context processor to return a
+    shopping bag dictionary which will be
+    accessible to all templates across the
+    entire application """
     bag_items = []
     total = 0
     product_count = 0

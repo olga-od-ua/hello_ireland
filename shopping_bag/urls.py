@@ -1,3 +1,5 @@
+""" A Module for generating url paths
+related to the Shopping Bag app """
 from django.urls import path
 from . import views
 
