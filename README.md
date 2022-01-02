@@ -1,14 +1,12 @@
 # Oh Hello Ireland
 
-![Logo](logo)
-
 Oh Hello Ireland is an online store that sells unique images of Ireland. When buying an image the customer receives all the copyrights for that particular image. Currently images are broken down into 5 main categories: Buildings, Landscapes, Portraits, Ocean & Sealife and Wildlife.
 
 Unlike other image stock online stores, Oh Hello Ireland sells images made by the best Irish photographers, meaning that all the objects in the images are presented through the eyes of true Irish people, reflecting their nature and culture.
 
-## [Oh Hello Ireland](https://hello-ireland.herokuapp.com/)
+## The live website can be viewed here: [Oh Hello Ireland](https://hello-ireland.herokuapp.com/)
 
-![Oh Hello Ireland](wireframes/home-responsive.png)
+![Oh Hello Ireland](media/readme_images/am_i_responsive.png)
 
 # CONTENT QUICK LINKS
 ## [UX](#wireframes)
@@ -69,7 +67,7 @@ NB: it was initially planned to have 5 different frame sizes (A1, A2, A3, A4 and
 5. [Jquery](https://jquery.com/)
     - Jquery, same as JavaScript, was used to to extend functionality of Django framework features and create other short-hand interactive facets.
 
-6. [Bootstrap 4.5](https://getbootstrap.com/docs/)
+6. [Bootstrap 4.4.1](https://getbootstrap.com/docs/)
     - Bootstrap was used for quick and easy style and layout solutions.
 
 7. [Font Awesome](https://fontawesome.com/)
@@ -122,15 +120,6 @@ NB: it was initially planned to have 5 different frame sizes (A1, A2, A3, A4 and
 
 24. [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
     - Chrome Developer Tools were used extensively during the development to ensure good responsiveness of the website and for debugging.
-
-???25. [WAVE web accessibility tool](https://wave.webaim.org/)
-* I used WAVE to make check any errors that my site may have which would effect users with hearing or visual disabilities.
-
-???26. [a11y](https://color.a11y.com/)
-
-
-???27. [CSS Autoprefixer](https://autoprefixer.github.io/)
-* I used Autoprefixer to ensure all of my css styles would work on all browsers.
 
 28. [Stripe](https://stripe.com/ie)
     - Stipe test API was used to take secure test payments from customers in the Checkout app.
