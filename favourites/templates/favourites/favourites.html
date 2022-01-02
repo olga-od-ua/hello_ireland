@@ -30,7 +30,7 @@
                                     </a>
                                 </p>
                             {% endif %}
-                                <p class="card-text"><small class="text-muted">€ {{ product.price }}</small></p>
+                                <p class="card-text">€ {{ product.price }}</p>
                                 <p class="mt-3 text-dark">{{ product.description }}</p>
                                 <p><a href="{% url 'remove_from_favourites' product.id %}" class="btn btn-black rounded-0 mt-3 rmv-favourites-btn" role="button"><i class="far fa-heart"></i> Remove From Favourites</a>
                                 <a href="{% url 'product_details' product.id %}" class="btn btn-outline-black rounded-0 mt-3" role="button"><i class="far fa-cart"></i>See details</a></p>
