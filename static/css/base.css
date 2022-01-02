@@ -172,6 +172,13 @@ nav {
     border-radius: 50%;
 }
 
+@media screen and (max-width: 767px) {
+    .prev-btn-photogr,
+    .next-btn-photogr {
+        padding-bottom: 22px;
+    }
+}
+
 /* BOOTSTRAP TOASTS */
 
 .message-container {
