@@ -90,11 +90,8 @@ NB: it was initially planned to have 5 different frame sizes (A1, A2, A3, A4 and
 12. [Jshint validator](https://jshint.com/)
     - Jshint was used to ensure all JavaScript code passed validation.
 
-???13. [PEP8 validator](http://pep8online.com/)
-    - PEP8 online was used to ensure all python code passed all PEP8 industry standards.
-
-???14. [Python extends class validator](https://extendsclass.com/python-tester.html)
-    - extendsclass was used to ensure all python syntax passed validation.
+13. [PEP8 validator](http://pep8online.com/)
+    - PEP8 online was used to ensure all python files pass PEP8 industry standards.
 
 ???15. [Lucid Chart](https://www.lucidchart.com/pages/)
 * Lucid chart was used to create the sitemap.
@@ -103,10 +100,10 @@ NB: it was initially planned to have 5 different frame sizes (A1, A2, A3, A4 and
 * Db diagram was used to create the database schema.
 
 17. [PIP3](https://pip.pypa.io/en/stable/)
-- PIP3 was used to install all packaging tools.
+    - PIP3 was used to install all packaging tools.
 
-?????18. [Am I responsive](http://ami.responsivedesign.is/)
-* AM I responsive was used to create attractive screenshots from all devices to display on my README file.
+18. [Am I responsive](http://ami.responsivedesign.is/)
+    - 'Am I responsive' was used to create screenshots from four main types of devices to be displayed in the README file.
 
 19. [Python3](https://www.python.org/download/releases/3.0/)
     - Python was used as the backend programming language.
@@ -143,6 +140,9 @@ NB: it was initially planned to have 5 different frame sizes (A1, A2, A3, A4 and
 
 30. [Cloudinary](https://cloudinary.com/)
     - Cloudinary was used for storing the full-sized products' images as well as the favicon image.
+
+31. [Grammarly](https://app.grammarly.com/)
+    - Grammarly was used to perform spellcheck across all project files.
 
 
 
