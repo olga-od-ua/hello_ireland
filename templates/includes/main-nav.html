@@ -24,12 +24,12 @@
             </a>
         </li>
         <li class="list-inline-item nav-item dropdown">
-            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="text-black nav-link" href="#" id="user-options-main" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="text-center">
                     <p class="my-0 text-black">My Account  <i class="fas fa-caret-down"></i> </p>
                 </div>
             </a>
-            <div class="dropdown-menu" aria-labelledby="user-options">
+            <div class="dropdown-menu" aria-labelledby="user-options-main">
                 {% if request.user.is_authenticated %}
                     {% if request.user.is_superuser %}
                         <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
