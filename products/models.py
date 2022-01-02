@@ -7,7 +7,7 @@ class Category(models.Model):
     """ A Class for Product Category """
     class Meta:
         """ A Meta Class to customise Category fields """
-        verbose_name_plural = "Categories"
+        verbose_name_plural = 'Categories'
 
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
