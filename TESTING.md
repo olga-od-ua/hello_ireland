@@ -17,7 +17,75 @@
 
 ## User stories testing:
 
+### Viewing and Navigation
 
+1. As a Customer I want to be able to see the full list of all products in order to select single products to purchase.
+
+2. As a Customer I want to be able to view individual product details so that I can see the image in a higher resolution by opening it in a new window, identify the price, product rating, description, available sizes.
+
+3. As a Customer I want to be able to see the grand total of my order at any time so that I can decide whether to buy more products or remove some from the basket
+
+### Registration and User Accounts
+
+4. As a Site User I want to be able to easily register for an account so that I can have a personal account and to be able to view my profile.
+
+5. As a Site User I want to be able to easily login and logout so that I can access my personal information.
+
+6. As a Site User I want to be able to sasily recover password so that I can get access to my account.
+
+7. As a Site User I want to be able to receive an email confirmation after registering in order to verify that my account registration was successful.
+
+8. As a Site User I want to be able to have a personalized user account so that I can view my personal order history, save my payment details.
+
+### Sorting and Searching
+
+9. As a Shopper	I want to be able to sort the list of available products in order to identify the best-priced, alphabetically and categorically sorted products.
+
+10. As a Shopper I want to be able to sort a specific category of products in order to identify the best-priced product in a selected category, sort products in that category by name.
+
+11. As a Shopper I want to be able to search for a product by name, location or description	in order to find a specific product I'd like to purchase.
+
+12. As a Shopper I want to be able to see what I've searched for in the search result and the number of my search results in order to quickly decide whether the product I need is available.
+
+### Purchasing and Checkout
+
+13. As a Shopper I want to be able to easily select the quantity of the products I want to purchase	so that I can add the correct product and its quantity to my shopping bag.
+
+14. As a Shopper I want to be able to view items in my shopping bag	so that I can identify the total cost of my order and the items I have ordered.
+
+15. As a Shopper I want to be able to adjust the quantity of a particular item in my shopping bag so that I can easily make changes to my order before checkout.
+
+16. As a Shopper I want to be able to easily submit my payment details in order to checkout effectively.
+
+17. As a Shopper I want to be assured that my personal and payment information is safe and secure so that I can confidently provide information that is needed to complete a purchase.
+
+18. As a Shopper I want to be able to view an order confirmation after checkout	so that I can verify that the order is correct.
+
+19. As a Shopper I want to be able to receive an email confirmation after checkout in order to have a copy of the order confirmation for my records.
+
+### Admin and Store Management
+
+20. As a Store Owner I want to be able to add a new product so that I can add new items to my shop.
+
+21. As a Store Owner I want to be able to edit a product so that I can change product criteria such as price, description, image etc..
+
+22. As a Store Owner I want to be able to delete a product so that I can remove items that are no longer on sale.
+
+### Reviews and Ratings
+
+23. As a Site User I want to be able to see reviews of products from other users in order to quickly decide whether this particular image is worth the purchase.
+
+24. As a Site User I want to be able to leave a review or several reviews on a specific product in order to quickly and easily share my opinion and impression of the given product.
+
+25. As a Site User I want to be able to delete my own review/reviews I have ever left on the website so that I can easily delete the information I personally shared about a specific product.
+
+### Favourite Products
+
+26. As a Shopper/Site User I want to be able to add images that I liked to my favourites in order to quickly and easily find them in the future (e.g. save an image for a later purchase or review).
+
+27. As a Shopper/Site User I want to be able to view images that I marked as my favourites so that I can proceed to purchase them.
+
+28. As a Shopper/Site User I want to be able to remove images that I no longer want to be marked as My Favourites so that I can easily manage My Favourites section of my account.
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:2px;border-width:0;color:gray;background-color: #eca50b">
