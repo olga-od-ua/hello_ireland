@@ -1,8 +1,8 @@
 # Oh Hello Ireland
 
-Oh Hello Ireland is an online store that sells unique images of Ireland. When buying an image the customer receives all the copyrights for that particular image. Currently images are broken down into 5 main categories: Buildings, Landscapes, Portraits, Ocean & Sealife and Wildlife.
+"Oh, Hello Ireland!" is an online store that sells unique images of Ireland. When buying an image the customer receives the copyrights for that particular image. Currently, images are broken down into 5 main categories: Buildings, Landscapes, Portraits, Ocean & Sealife and Wildlife.
 
-Unlike other image stock online stores, Oh Hello Ireland sells images made by the best Irish photographers, meaning that all the objects in the images are presented through the eyes of true Irish people, reflecting their nature and culture.
+Unlike other image stock online stores, "Oh, Hello Ireland!" sells images made by the greatest Irish photographers, meaning that all the objects in the images are presented through the eyes of true Irish people, reflecting their authenticity, nature and culture.
 
 ## The live website can be viewed here: [Oh Hello Ireland](https://hello-ireland.herokuapp.com/)
 
@@ -25,7 +25,28 @@ Unlike other image stock online stores, Oh Hello Ireland sells images made by th
 [Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes for this project. As the creation of the wireframes was carried out before the project development started, it does not have all the views and pages and may slightly vary from the final webstie version.
 
 [Wireframes](media/readme_images/wireframes/wireframes_hello_ireland.pdf)
+
+# The Strategy Plane
+
+THE RESEARCH PHASE
+### The primary goal. 
+- "Oh, Hello Ireland!" website is designed to provide a platform for products made by Irish photographers where their products (in the majority of the cases the product is an image or photo) will be sold in both printed and digital formats.
+
+- The printed images are sold in 5 different frame sizes (i.e. A1, A2, A3, A4 and A5).
+
+- The users will be able to register, browse products, search for products, add their favourite products to their Favourites.
+
+- The users will be able to view and leave reviews as well as delete their own reviews they had left before.
+
+- The users will be able to see the most popular product categories in the button-like form on All Images page in order to navigate to the desired category faster.
+
+- The users will be able to sort and search for the products. The users will have an option to easily and quickly checkout.
+
+- The customer's estimated needs are to find and buy quickly and easily buy their chosen products.
+
 ## User stories
+
+The target audience is people of all ages and nationalities who are interested in browing and/or purchasing authentic images of Ireland.
 
 ### Viewing and Navigation
 
@@ -43,7 +64,7 @@ Unlike other image stock online stores, Oh Hello Ireland sells images made by th
 
 6. As a Site User I want to be able to easily login and logout so that I can access my personal information.
 
-7. As a Site User I want to be able to esasily recover password so that I can get access to my account.
+7. As a Site User I want to be able to easily recover password so that I can get access to my account.
 
 8. As a Site User I want to be able to receive an email confirmation after registering in order to verify that my account registration was successful.
 
@@ -79,7 +100,7 @@ Unlike other image stock online stores, Oh Hello Ireland sells images made by th
 
 21. As a Store Owner I want to be able to add a new product so that I can add new items to my shop.
 
-22. As a Store Owner I want to be able to edit a product so that I can change product criteria such as price, description, image etc..
+22. As a Store Owner I want to be able to edit a product so that I can change product criteria such as price, description, image etc.
 
 23. As a Store Owner I want to be able to delete a product so that I can remove items that are no longer on sale.
 
@@ -99,6 +120,13 @@ Unlike other image stock online stores, Oh Hello Ireland sells images made by th
 
 29. As a Shopper/Site User I want to be able to remove images that I no longer want to be marked as My Favourites so that I can easily manage My Favourites section of my account.
 
+
+## The Scope Plane
+
+The website is planned to have three main releases as identified in the table below in order to unfold new experiences for the users in the future.
+
+![Scope Plane](media/readme_images/scope_plane.png)
+
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
@@ -114,8 +142,6 @@ Every product details page displays all the reviews, the rating given at the tim
 
 1. There is currently no sizes or dimensions information available, as well as no size or dimensions selection for an image available throughout the website. Due to time constraints these features have not been implemented yet and are planned to be implemented in the future. Frame sizes will become available when images can be sold in printed versions. It is also planned to display dimensions of digital images in the product details in the future.
 
-NB: it was initially planned to have 5 different frame sizes (A1, A2, A3, A4 and A5) and this can be traced in the website development history, however this feature was not worked through thouroughly enough to be presented in the final website version.
-
 2. Currently any authenticated user can leave a review for any product. As a future feature, it is planned to destinguish whether the reviewer bought the image they are reviewing in the past or whether they bought a different image or whether they have not made a purchase from the website yet.
 
 3. Currently any authenticated user can leave as many reviews as they like. In the future it is planned to put some restrictions in place (e.g. only one review per product or allowing to only review products that the user had bought in the past).
@@ -127,6 +153,10 @@ NB: it was initially planned to have 5 different frame sizes (A1, A2, A3, A4 and
 6. Social links in the footer were added for visual purposes only and do not carry out any critical functionality. They are currently linked to the home page of the respective website. In the future they will be redirecting the user to the appropriate destination. 
 
 7. Rating field will be removed from the Add a Product form and the ratings data will be taken from user reviews. As this feature is not implemented yet (once again due to time constraints), sorting by rating is not fully functioning. 
+
+8. Currently, all the images are sold in only 5 frame sizes and are not distorted when printed, meaning that there may be a lot of white space on the printed version. It would be great to implement a feature that would either give the users a preview of what the printed image will look like or adjust the frame size to the image dimensions. I was also initially planned to adjust the price according to the frame size.
+
+9. Currently, the How It Works section on the Home Page states that "You will receive a digital copy of the purchased image via email within 3 days upon successful purchase." This will be carried out by the admin who will be checking the new orders and sending the digital copies of the image manually to the customer. It is planned to automate this process where the admin will automatically receive notifications when a new order is placed and the digital copy of the purchased image will be sent to the customer at the time of purchase.
 
 # TECHNOLOGIES USED
 

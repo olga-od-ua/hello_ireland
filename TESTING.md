@@ -252,7 +252,7 @@ All Javascript code was validated using [Jshint validator](https://jshint.com/).
 
 
 ### Lighthouse performance test:
-![Lighhouse test]()
+![Lighhouse test](media/readme_images/validation/lighthouse_report.png)
 
 Lighthouse in Chrome devtools was used to test the website's performance. According to the Lighthouse suggestion the report was generated from an Incognito mode.
 
