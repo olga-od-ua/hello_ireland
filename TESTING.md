@@ -1,5 +1,7 @@
 # TESTING.md
 
+!NB: it is recommended to view the TESTING.md and README.md files in the GitHub Dark Theme turned on for distinct demarcation of the files' sections and screenshots. The Dark Theme can be turned on by going into your GitHub settings from the dropdown in the top right and then navigating to Appearance in the Account Settings from the menu on the left. Go to Theme Mode and select Single Theme (instead of the Sync with system) and then select a Dark Theme; refresh the page.
+
 # CONTENT QUICK LINKS
 ## [User Stories](#user-stories-testing)
 ## [Validation](#code-validation)
@@ -343,6 +345,7 @@ Two warnings were taken into account and fixed, namely:
 
 * The toasts messages reappear from the previous action when the back browser button is clicked. It is planned in the future to implement a timeout function and ensure the message does not reappear.
 
+### Known Bugs
 
 ### Not bugs but the room and notes for improvement.
 

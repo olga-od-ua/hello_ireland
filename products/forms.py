@@ -47,10 +47,12 @@ class ProductReviewForm(forms.ModelForm):
             'review_message': forms.Textarea(attrs={
                 'class': 'form-control',
                 'maxlength': '200',
+                'required': True
                 }),
             'rating': forms.Select(choices=RATING_CHOICES, attrs={
                 'class': 'form-control',
-                'required': True}),
+                'required': True
+                }),
         }
         labels = {
             'review_message': 'Please leave your review here:',

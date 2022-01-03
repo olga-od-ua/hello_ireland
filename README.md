@@ -8,28 +8,26 @@ Unlike other image stock online stores, "Oh, Hello Ireland!" sells images made b
 
 ![Oh Hello Ireland](media/readme_images/am_i_responsive.png)
 
+!NB: it is recommended to view the README.md and TESTING.md files in the GitHub Dark Theme turned on for distinct demarcation of the files' sections and screenshots. The Dark Theme can be turned on by going into your GitHub settings from the dropdown in the top right and then navigating to Appearance in the Account Settings from the menu on the left. Go to Theme Mode and select Single Theme (instead of the Sync with system) and then select a Dark Theme; refresh the page.
 # CONTENT QUICK LINKS
-## [UX](#wireframes)
-## [FEATURES](#implemented-features)
-## [SITEMAP](#sitemap-layout)
+## [STRATEGY PLANE](#the-strategy-plane)
+## [USER STORIES](#user-stories-list)
+## [THE SCOPE PLANE](#the-scope-plane-table)
+## [THE STRUCTURE PLANE](#the-structure-plane-definition)
+## [THE SKELETON PLANE](#the-skeleton-plane-wireframes)
+## [THE SURFACE PLANE](#the-surface-plane-details)
+## [FEATURES](#present-and-future-features)
 ## [DATABASE](#database-schema)
 ## [TECHNOLOGIES](#technologies-used)
-## [TESTING](#testing)
-## [DEPLOYMENT](#deployment)
+## [TESTING](#detailed-testing)
+## [DEPLOYMENT](#deployment-steps-and-instructions)
 ## [CREDITS](#code-credits)
-## [ACKNOWLEDGEMENTS](#acknowledgements)
-## [DISCLAIMER](#disclaimer)
+## [ACKNOWLEDGEMENTS](#my-acknowledgements)
 
-# Wireframes
 
-[Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes for this project. As the creation of the wireframes was carried out before the project development started, it does not have all the views and pages and may slightly vary from the final webstie version.
+# THE STRATEGY PLANE
 
-[Wireframes](media/readme_images/wireframes/wireframes_hello_ireland.pdf)
-
-# The Strategy Plane
-
-THE RESEARCH PHASE
-### The primary goal. 
+## The primary goal. 
 - "Oh, Hello Ireland!" website is designed to provide a platform for products made by Irish photographers where their products (in the majority of the cases the product is an image or photo) will be sold in both printed and digital formats.
 
 - The printed images are sold in 5 different frame sizes (i.e. A1, A2, A3, A4 and A5).
@@ -44,7 +42,7 @@ THE RESEARCH PHASE
 
 - The customer's estimated needs are to find and buy quickly and easily buy their chosen products.
 
-## User stories
+# USER STORIES LIST
 
 The target audience is people of all ages and nationalities who are interested in browing and/or purchasing authentic images of Ireland.
 
@@ -121,24 +119,117 @@ The target audience is people of all ages and nationalities who are interested i
 29. As a Shopper/Site User I want to be able to remove images that I no longer want to be marked as My Favourites so that I can easily manage My Favourites section of my account.
 
 
-## The Scope Plane
+## **[BACK TO TOP](#content-quick-links)** *
+<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
+
+
+# THE SCOPE PLANE TABLE
 
 The website is planned to have three main releases as identified in the table below in order to unfold new experiences for the users in the future.
 
 ![Scope Plane](media/readme_images/scope_plane.png)
 
+This table shows all the website's existing features in the 1st Release column and Features that are still to be implemented in the 2nd and 3rd Release columns.
+
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
-# Implemented Features
+
+# THE STRUCTURE PLANE DEFINITION
+
+1. The website has the Navbar that will feature linear menu elements representing the self-explanatory main sections of the project, namely:
+
+### Large Screens
+* "Oh Ireland!" logo that is linked to the Home Page 
+* Images dropdown with the following dropdown list items:
+   - All Images
+   - Buldnigs
+   - Landscapes
+   - Portraits
+   - Ocean and Sea Life
+   - Wildlife
+* About Us
+* My Account dropdown with the following dropdown list items:
+   - Product Management (for site owners only)
+   - My Profile (for authenticated users)
+   - My Favourites (for authenticated users)
+   - Logout (for authenticated users)
+   - Register (for non-authenticated users)
+   - Login (for non-authenticated users)
+* Shopping Basket (represented by a shopping basket icon and displaying the grand total whenever there are items in the basket)
+* Search bar
+
+### Medium and Small Screen Sizes
+* Search Bar
+* My Account dropdown with the following dropdown list items:
+   - Product Management (for site owners only)
+   - My Profile (for authenticated users)
+   - My Favourites (for authenticated users)
+   - Logout (for authenticated users)
+   - Register (for non-authenticated users)
+* Shopping Basket (represented by a shopping basket icon and displaying the grand total whenever there are items in the basket)
+* The collapsible menu that is the exact copy of the one for large screens except the items will be positioned in an unordered list.
+
+2. The footer will appear on each page and view and will have the following information to hand:
+
+* Social networks links
+* Copyright with the link to the Home Page.
+
+3. Home page the information about the website's main objective and about how the website works along with the link to the All Images page.
+
+4. Images menu item will offer the user to select among All images and one of the five categories.
+
+5. About Us page will give the user the brief information about the website creators. Here users will also be able to see the highest rated reviews and information about the website's photographers.
+
+6. From My Account users will be able to manage their account, login and logout, manage their Favourite Products. The site owners will be able to manage Products.
+
+7. The shopping basket icon will bring any user to their shopping bag where they will be able to see the details of the added products they are about to buy. It also gives the users the options to adjust the quantity of the products of a particular size, delete them from the basket and proceed to the secure checkout.
 
 
+## **[BACK TO TOP](#content-quick-links)** *
+<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
+
+
+# THE SKELETON PLANE WIREFRAMES
+
+## Wireframes
+
+[Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes for this project. As the creation of the wireframes was carried out before the project development started, it does not have all the views and pages and may slightly vary from the final webstie version.
+
+[Wireframes](media/readme_images/wireframes/wireframes_hello_ireland.pdf)
+
+## **[BACK TO TOP](#content-quick-links)** *
+<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
+
+
+# THE SURFACE PLANE DETAILS
+
+### Design
+The website is designed in a minimalistic style in order to create the impression of simplicity to the user.
+
+### Colour Scheme
+A mix of the following colours was used throughout the website as a representation of the Irish Flag colours: #20a73d, #fff and #eca50b. The buttons that carry out main functionality are styled in black colour to be distinct.
+
+### Typography
+Montserrat Light was selected as the main font for light weight, delicate and trendy headlines. Lora Regular font was selected for all the text as the most matching font with Montserrat Light creating a clean look.
+
+### Imagery
+There are not many images across the website other than the images that are for sale.
+
+Among images that are not for sale are the background image with the green shamrock theme and the shamrock favicon to represent the Irish theme of the website.
+
+## **[BACK TO TOP](#content-quick-links)** *
+<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
+
+
+# PRESENT AND FUTURE FEATURES 
+## Implemented Features
 
 - REVIEWS. Any Site User can leave a review (or several reviews) on any product. There is no editing available in order to capture the thoughts of that specific reviewer at the time of the review and avoid having users to edit minor details of their reviews thus confusing other Site Users with contradicting information. Users, however, are allowed to delete their own reviews entirely.
 
 Every product details page displays all the reviews, the rating given at the time of the review, the review message, the date and the reviewer's username.
 
-## Future Features
+### Future Features
 
 1. There is currently no sizes or dimensions information available, as well as no size or dimensions selection for an image available throughout the website. Due to time constraints these features have not been implemented yet and are planned to be implemented in the future. Frame sizes will become available when images can be sold in printed versions. It is also planned to display dimensions of digital images in the product details in the future.
 
@@ -157,6 +248,17 @@ Every product details page displays all the reviews, the rating given at the tim
 8. Currently, all the images are sold in only 5 frame sizes and are not distorted when printed, meaning that there may be a lot of white space on the printed version. It would be great to implement a feature that would either give the users a preview of what the printed image will look like or adjust the frame size to the image dimensions. I was also initially planned to adjust the price according to the frame size.
 
 9. Currently, the How It Works section on the Home Page states that "You will receive a digital copy of the purchased image via email within 3 days upon successful purchase." This will be carried out by the admin who will be checking the new orders and sending the digital copies of the image manually to the customer. It is planned to automate this process where the admin will automatically receive notifications when a new order is placed and the digital copy of the purchased image will be sent to the customer at the time of purchase.
+
+## **[BACK TO TOP](#content-quick-links)** *
+<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
+
+
+# DATABASE SCHEMA
+
+
+## **[BACK TO TOP](#content-quick-links)** *
+<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
+
 
 # TECHNOLOGIES USED
 
@@ -241,9 +343,34 @@ Every product details page displays all the reviews, the rating given at the tim
 31. [Grammarly](https://app.grammarly.com/)
     - Grammarly was used to perform spellcheck across all project files.
 
+## **[BACK TO TOP](#content-quick-links)** *
+<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
-# TESTING
+
+# DETAILED TESTING
 
 Click here for the detailed [Testing Information](https://github.com/olga-od-ua/hello_ireland/blob/main/TESTING.md)
 
+## **[BACK TO TOP](#content-quick-links)** *
+<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
+
+
+# DEPLOYMENT STEPS AND INSTRUCTIONS
+
+## **[BACK TO TOP](#content-quick-links)** *
+<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
+
+
+# CODE CREDITS
+
+
+## **[BACK TO TOP](#content-quick-links)** *
+<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
+
+
+# MY ACKNOWLEDGEMENTS
+
+
+## **[BACK TO TOP](#content-quick-links)** *
+<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
