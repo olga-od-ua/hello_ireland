@@ -9,6 +9,7 @@ Unlike other image stock online stores, "Oh, Hello Ireland!" sells images made b
 ![Oh Hello Ireland](media/readme_images/am_i_responsive.png)
 
 !NB: it is recommended to view the README.md and TESTING.md files in the GitHub Dark Theme turned on for distinct demarcation of the files' sections and screenshots. The Dark Theme can be turned on by going into your GitHub settings from the dropdown in the top right and then navigating to Appearance in the Account Settings from the menu on the left. Go to Theme Mode and select Single Theme (instead of the Sync with system) and then select a Dark Theme; refresh the page.
+
 # CONTENT QUICK LINKS
 ## [STRATEGY PLANE](#the-strategy-plane)
 ## [USER STORIES](#user-stories-list)
@@ -357,6 +358,143 @@ Click here for the detailed [Testing Information](https://github.com/olga-od-ua/
 
 # DEPLOYMENT STEPS AND INSTRUCTIONS
 
+## Local Deployment
+### Required tools:
+* [Gitpod](https://www.gitpod.io/)
+* [PIP](https://pip.pypa.io/en/stable/)
+* [Python3](https://www.python.org/download/releases/3.0/)
+* [Amazon AWS S3 bucket](https://aws.amazon.com/)
+### Create a local copy:
+
+### Directions: 
+1. On GitHub, navigate to the main page of the repository: [https://github.com/olga-od-ua/hello_ireland/].
+
+2. At the top of the repository, select the Code drop down and copy the Clone URL.
+![Clone code](media/readme_images/clone_code.png)
+
+3. In your IDE workspace, open a Terminal window and use the cd command to change the directory to where you want the cloned directory to be made and type git clone and paste in https://github.com/olga-od-ua/hello_ireland.git .
+
+4. Click enter and the project will be created and cloned locally.
+
+### Working with the local copy:
+
+1. Install all the project dependencies from the terminal window of your IDE by typing: pip3 install -r requirements.txt.
+
+2. Create an env.py file to contain the environment variables, which should include the following:
+* Add import os to the top of the file
+### Set the environment variables:
+* os.environ['SECRET_KEY'] = 'Django secret key
+* os.environ['DEVELOPMENT'] = 'True'
+* os.environ['STRIPE_PUBLIC_KEY'] = 'Stripe public key'
+* os.environ['STRIPE_SECRET_KEY'] = 'Stripe secret key' (A test key was used in this project)
+* os.environ['STRIPE_WH_SECRET'] = 'Stripe signing secret' (Webhook endpoint key)
+* os.environ['DATABASE_URL'] = 'Postgres url'
+
+4. In order to prevent sensitive information such as secret keys and database passwords being pushed to your public github repository create a .gitignore file in the root directory of the project and add the env.py file.
+
+5. Apply database migrations using: 'python3 manage.py migrate'
+
+6. Create a new superuser with this command: 'python3 manage.py createsuperuser'
+
+7. Type python3 manage.py runserver in your terminal to run the app locally.
+
+## Deployment to Heroku
+
+## Note:
+Before deploying to Heroku if you have a large selection of products on an Eccommerce store it is worth dumping the product and category models to a json file from your SQLite db, these can then be loaded to the Postgres database instead of having to add all products manually after deploying. 
+
+To deploy the app to Heroku from the repository, follow the below steps:
+
+1. Login to Heroku.
+2. Select Create new app from the dropdown menu in the dashboard.
+3. Choose a unique app name and select the closest location.
+4. From the Resources tab in Add-ons locate Heroku Postgres and add it to the app.
+5. In the CLI, install dj_database_url and psycopg2 to use Postgres on the deployed site.
+* pip3 install dj_database_url
+* pip3 install psycopg2
+6. Log into Heroku via the CLI - 'heroku login -i' and enter login details for your Heroku account.
+7. Migrate the SQLite database into Postgres - 'heroku run python manage.py migrate'.
+8. Create a new superuser - 'python3 manage.py createsuperuser'.
+9. Install gunicorn - 'pip3 install gunicorn'.
+12. Freeze the app's requirements - 'pip3 freeze > requirements.txt'.
+13. Create a Procfile and include - 'web: gunicorn hello_ireland.wsgi:application'.
+14. Temporarily disable Heroku's static file collection as we will be using Amazon AWS to host static files - 'heroku config:set DISABLE_COLLECTSTATIC=1 --app hello-ireland'.
+15. Add the hostname of the Heroku app to settings.py - ALLOWED_HOSTS = ['hello-ireland.herokuapp.com', 'localhost'].
+16. In Heroku, click the Settings tab and under Config Vars choose Reveal Config Vars.
+Enter the following keys and values, which can be found in your env.py and settings files:
+
+* AWS_ACCESS_KEY_ID	variable goes here
+* AWS_SECRET_ACCESS_KEY	variable goes here
+* DATABASE_URL	added by Heroku when Postgres installed
+* DISABLE_COLLECTSTATIC	1 variable to be deleted later
+* EMAIL_HOST_PASS	variable goes here
+* EMAIL_HOST_USER	variable goes here
+* SECRET_KEY	variable goes here>
+* STRIPE_PUBLIC_KEY	variable goes here
+* STRIPE_SECRET_KEY	variable goes here
+* STRIPE_WH_SECRET	different from env.py
+* USE_AWS	True
+
+### Deploy automatically from github:
+* Click on the deployment tab in Heroku.
+* Choose your github profile and add your repository name.
+* Press the search button and when it is found click "connect to this app" button.
+* Return to the Deploy tab and under Automatic deploys select Enable Automatic Deploys.
+* In the GitPod CLI add, commit and push all changes and Heroku will automatically deploy app.
+* git add .
+* git commit -m "_commit message_"
+* git push
+* To launch the deployed site, select Open App from its page in Heroku.
+* Heroku will initiate a new build each time we push new code to the github repository. 
+
+## Storing Static Files
+The media files for the deployed site are hosted in AWS S3 Bucket. In order to successfully use this service the following needs to be set:
+
+* AWS account
+* Bucket Policy
+* Group
+* Access Policy
+* User. Please note that it is important to download AWS User Credentials (namely Access key ID and Secret access key) at the time of creting as they will not be available for download at any later stage.
+
+Once these settings are implemented, AWS needs to be connected to Django using the following steps:
+
+1. Install boto3, django-storages and update the requirements.txt file.
+2. In settings.py, add storages to INSTALLED APPS as well as the code below. Then create a custom_storages.pyfile.
+
+```
+if 'USE_AWS' in os.environ:
+    # Cache control
+    AWS_S3_OBJECT_PARAMETERS = {
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'CacheControl': 'max-age=94608000',
+    }
+
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'oh-hello-ireland'
+    AWS_S3_REGION_NAME = 'eu-west-1'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+```
+
+* AWS provides a csv file for download of user secret variables; these can now be added to Heroku config vars in the settings tab in Heroku:
+- AWS_ACCESS_KEY_ID from Access key ID column of your AWS User credentials file.
+- AWS_SECRET_ACCESS_KEY from Secret access key column of your AWS User credentials file.
+
+* Remove the DISABLE_COLLECTSTATIC variable from Convig Vars and deploy the Heroku app.
+
+* In AWS, create a new folder called media next to the static folder and upload any required media files to it, making sure they are publicly accessible in Permissions.
+
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
@@ -412,11 +550,13 @@ Below are the links to resources where some of the products' description was tak
 13. [Kylemore Abbey](https://www.kylemore-pass-hotel-connemara.com/activities/kylemore-abbey/).
 14. [Ross Caslte](https://en.wikipedia.org/wiki/Ross_Castle).
 
-# Other Crefits
+# Other Credits
 
 1. Fonts ideas are taken from [Artisanthemes](https://artisanthemes.io/best-google-fonts-combinations-modern-agency-website/).
 
 2. [Django Documentation](https://docs.djangoproject.com/en/4.0/) was extensively used throughout the develpment of "Oh, Hello Ireland!" project.
+
+3. I often resorted to [StackOverflow](https://stackoverflow.com/) when encountering some problems. Links to StackOverflow posts that helped me resolve issues are provided in their relevant parts  of this README.md.
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
@@ -424,6 +564,13 @@ Below are the links to resources where some of the products' description was tak
 
 # MY ACKNOWLEDGEMENTS
 
+1. I would like to thank my mentors Gerard McBride and later Sandeep Aggarwal for their professional support and guidance.
+
+2. [Code Institute's](https://codeinstitute.net/ie/) leaders, tutors and all the staff involved in creating such a fantastic course.
+
+3. My husband Kevin for continuous support and encouragement whenever he was not at sea and being the only helping hand during the ongoing pandemic.
+
+4. For the constant assistance and understanding from my now 13-month-old daughter Mila who was with me throughout and hopefully she will one day become a Code Institute student herself.
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
