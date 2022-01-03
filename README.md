@@ -226,9 +226,9 @@ Among images that are not for sale are the background image with the green shamr
 # PRESENT AND FUTURE FEATURES 
 ## Implemented Features
 
-- REVIEWS. Any Site User can leave a review (or several reviews) on any product. There is no editing available in order to capture the thoughts of that specific reviewer at the time of the review and avoid having users to edit minor details of their reviews thus confusing other Site Users with contradicting information. Users, however, are allowed to delete their own reviews entirely.
+Implemented features are presented in the [THE SCOPE PLANE](#the-scope-plane-table) in the column related to the first release. Below are some notes about the existing features.
 
-Every product details page displays all the reviews, the rating given at the time of the review, the review message, the date and the reviewer's username.
+- REVIEWS. Any Site User can leave a review (or several reviews) on any product. There is no editing available in order to capture the thoughts of that specific reviewer at the time of the review and avoid having users to edit some details of their reviews thus confusing other Site Users with contradicting information. Users, however, are allowed to delete their own reviews entirely. Every product details page displays all the reviews, the rating given at the time of the review, the review message, the date and the reviewer's username. It is understood that at when the is a considerable number of reviews is stored, it will be rather unreadable so the presentation of the review will have to be changed to a differently styled section with pagination. It is also known that it is not practical or safe to allow a user to leave as many reviews as they like.
 
 ### Future Features
 
@@ -244,11 +244,17 @@ Every product details page displays all the reviews, the rating given at the tim
 
 6. Social links in the footer were added for visual purposes only and do not carry out any critical functionality. They are currently linked to the home page of the respective website. In the future they will be redirecting the user to the appropriate destination. 
 
-7. Rating field will be removed from the Add a Product form and the ratings data will be taken from user reviews. As this feature is not implemented yet (once again due to time constraints), sorting by rating is not fully functioning. 
+7. Rating field will be removed from the Add a Product form and the ratings data will be taken from user reviews. As this feature is not implemented yet (due to time constraints), sorting by rating is not currently implemented. 
 
 8. Currently, all the images are sold in only 5 frame sizes and are not distorted when printed, meaning that there may be a lot of white space on the printed version. It would be great to implement a feature that would either give the users a preview of what the printed image will look like or adjust the frame size to the image dimensions. I was also initially planned to adjust the price according to the frame size.
 
 9. Currently, the How It Works section on the Home Page states that "You will receive a digital copy of the purchased image via email within 3 days upon successful purchase." This will be carried out by the admin who will be checking the new orders and sending the digital copies of the image manually to the customer. It is planned to automate this process where the admin will automatically receive notifications when a new order is placed and the digital copy of the purchased image will be sent to the customer at the time of purchase.
+
+10. As new photographers join the store it would be great to create a separate app to manage photographers' database and display them on the about us page in a more concise code, e.g. a for loop. Due to time constraints this is added to the future features and a bootstrap carousel was used to display just three photographers for visual UX purposes. Once that is implemented, we will be able to display the photographer's name under the images they have taken and sort and filter by photographers.
+
+11. Currently when a user signs in from a product details page from the login link under the review section, they are brought to the sign in page and once signed in, they are redirected to the home page instead of the same product details page. Due to time constraint this issue was not resolved and is planned to be tackled in the future.
+
+12. There is currently no pagination or back to top button in place on My Favourites page and this is planned as a future feature.
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
@@ -400,7 +406,7 @@ Click here for the detailed [Testing Information](https://github.com/olga-od-ua/
 
 ## Deployment to Heroku
 
-## Note:
+**Note:**
 Before deploying to Heroku if you have a large selection of products on an Eccommerce store it is worth dumping the product and category models to a json file from your SQLite db, these can then be loaded to the Postgres database instead of having to add all products manually after deploying. 
 
 To deploy the app to Heroku from the repository, follow the below steps:
@@ -494,6 +500,13 @@ if 'USE_AWS' in os.environ:
 * Remove the DISABLE_COLLECTSTATIC variable from Convig Vars and deploy the Heroku app.
 
 * In AWS, create a new folder called media next to the static folder and upload any required media files to it, making sure they are publicly accessible in Permissions.
+
+
+### Notes about the deployment and version control process of hello-ireland project
+
+1. Project contains a few commits that were made only for the purposes of testing the automatic deploy functionality ("testing deployment") which did not work properly at the start.
+
+2. There was an accidental revert of the commit id 57d1c229ec867143f91c963ccb8b2669c3f1dab6 which resulted in the loss of all the code related to ProductReview model. This was restored by recreating Reviews functionality from scratch.
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">

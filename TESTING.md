@@ -17,7 +17,7 @@
 ## [Bugs](#bugs-and-fixes)
 ## [RETURN TO README](https://github.com/olga-od-ua/hello_ireland/blob/main/README.md)
 
-## User stories testing:
+## User stories testing
 
 ### Viewing and Navigation
 
@@ -209,7 +209,7 @@
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:2px;border-width:0;color:gray;background-color: #eca50b">
 
-## Code Validation:
+## Code Validation
 
 ### **Html**:
 
@@ -231,6 +231,9 @@ During the code review it was noticed that the css code for the styling of the c
 
 All code was checked for valid indentation, whitespace, blank line space and line length using 
 the [PEP8 validator](http://pep8online.com/).
+
+Some flake8 and pylint errors were left unresolved due to the complexity of the indentation and readability of the code it would have created. For example, in the following code snippet the last line is marked as "too long" however it was decided to leave it unchanged to match the style of the two lines of code above it. For example, in the following code snippet the last line is marked as "too long" however it was decided to leave it unchanged to match the style of the two lines of code above it.
+![line too long code example](media/readme_images/line_too_long.png)
 
 ### **Javascript Validation**:
 
@@ -347,13 +350,22 @@ Two warnings were taken into account and fixed, namely:
 
 ### Known Bugs
 
-### Not bugs but the room and notes for improvement.
+* Currently when a user signs in from a product details page from the login link under the review section, they are brought to the sign in page and once logged in, they are redirected to the home page instead of the same product details page. Due to time constraint this issue was not resolved and is planned to be tackled in the future.
+
+
+### Not bugs but the room for improvement and other notes.
 
 * It is planned to prepopulate user's full name in the checkout form for authanticated users.
 
+* Blue outline can be traced throughout the website upon a click on a button or link. This was not tackled due to time constraints.
 
+* There is no way to run out of images so the database was not designed to have a certain amount of stock.
 
+* There is currently no pagination or back to top button in place on My Favourites page and this is planned as a future feature.
 
+* Currently all the products are images hence they have frame sizes. The functionality for products with no frame sizes was implemented for educational purposes and in case the store will start selling products with no frame sizes, e.g. digital images only.
+
+* As this project is for educational purposes the watermarks have not been removed.
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
