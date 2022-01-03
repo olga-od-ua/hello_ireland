@@ -363,6 +363,60 @@ Click here for the detailed [Testing Information](https://github.com/olga-od-ua/
 
 # CODE CREDITS
 
+1. A lot of the website's structure, functionality and style code was borrowed from the [Code Institute's](https://codeinstitute.net/ie/) walkthrough project "Boutique Ado" from the "Full Stack Frameworks With Django" module. For the time-saving purposes and in order to strengthen the knowledge received from this module it was decided to utilize the borrowed code instead of 'reinventing the wheel'. Thank you Chris Z for such a thorough, valuable and inspirational walkthrough project.
+
+2. Product Review functionality was achieved using the knowledge received from the Code Institute course materials along with various previously watched tutorials on YouTube, especially the tutorial by [Great Adib](https://www.youtube.com/watch?v=MmLRE2fCcec) and [Code With Stein](https://www.youtube.com/watch?v=Y5vvGQyHtpM).
+
+3. Favourites app was built with a combination of knowledge received from several tutorials, Slack Community and Django documentation:
+* [Django Documentation](https://docs.djangoproject.com/en/4.0/)
+* Tutorials by [Very Academy](https://github.com/veryacademy): [Tutorial1](https://www.youtube.com/watch?v=OgA0TTKAtqQ) and [Tutorial2](https://www.youtube.com/watch?v=H4QPHLmsZMU). "Add to" and "Delete from" Favourites buttons functionality was also borrowed from these tutorials.
+* A [Tutorial](https://www.youtube.com/watch?v=aCpHK3TIlR8) by [Dev Education](https://dev-ed.ru/).
+* Before creating the Favourites app, I looked up ideas for such functionality that my peers shared on Slack Community, which gave me some ideas and a lot of inspiration.
+
+# IMAGERY CREDITS
+
+1. Blacksod Point Lighthouse image was found on [Buildings Of Ireland](https://www.buildingsofireland.ie/building-of-the-month/blacksod-point-lighthouse-fallmore-td-county-mayo/) website.
+2. Atlantic Puffin image was downloaded from [Wikipedia](https://en.wikipedia.org/wiki/Fauna_of_Ireland). Photo taken by Andreas Trepte.
+3. Robin in nature image was downloaded from [Google Image Search](https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2020%2F05%2F08%2F17%2F05%2Frobin-5146569_960_720.jpg&imgrefurl=https%3A%2F%2Fpixabay.com%2Fphotos%2Frobin-bird-nature-wildlife-ireland-5146569%2F&tbnid=rI_r0iABPdFbjM&vet=10CDYQMyjNAmoXChMIwLnQ5-e49AIVAAAAAB0AAAAAEAQ..i&docid=JU9S6pwViw5hvM&w=960&h=582&itg=1&q=wildlife%20ireland&ved=0CDYQMyjNAmoXChMIwLnQ5-e49AIVAAAAAB0AAAAAEAQ).
+4. Irish Girl in Tweed Hat image was downloaded from [Istockphoto](https://www.istockphoto.com/photo/beautiful-irish-girl-on-st-patricks-day-dublin-ireland-gm534457350-94832499).
+5. Irish Woman with Red Hair image is from [StyleMePretty](https://www.stylemepretty.com/).
+6. Irish Man with a Pint image is from [GettyImages](https://www.gettyimages.ie/detail/photo/happy-irishman-vintage-portrait-royalty-free-image/143918986).
+7. Lion's Mane jellyfish image is from [Coastmonkey](https://coastmonkey.ie/lions-mane-jellyfish-sandycove/).
+8. Humpback Whale image is from [Coastmonkey](https://coastmonkey.ie/whale-watch-ireland-2017/).
+9. Gorgonocephalus image is from [Coastmonkey](https://coastmonkey.ie/rare-sponge-reef-coral-ireland/).
+10. Home page Ross castle image	was downloaded from [Google Search](https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.guide-ireland.com%2Fwp-content%2Fuploads%2F2014%2F06%2Fross-castle-1-scaled.jpg&imgrefurl=https%3A%2F%2Fwww.guide-ireland.com%2Ftourist-attractions%2Fross-castle%2F&tbnid=33QPB0lcpnI-XM&vet=12ahUKEwiYlYH_ncz0AhWMCsAKHZ17CX0QMygPegUIARD0AQ..i&docid=o5jwi0_cNAopxM&w=2560&h=1707&itg=1&q=ross%20castle&hl=en&ved=2ahUKEwiYlYH_ncz0AhWMCsAKHZ17CX0QMygPegUIARD0AQ).
+11. Home background shamrock-themed image is from [Biospace](https://www.biospace.com/getasset/6ef7d6e5-6a0d-40c7-a538-989d023fca97/).
+12. Kylemore Abbey image is from [Kylemore Abbey website](https://www.kylemore-pass-hotel-connemara.com/activities/kylemore-abbey/).
+13. Favicon image was taken from [PngHut](https://img1.pnghut.com/18/7/12/Vj87g46ES4/saint-patricks-day-symbol-green-free-content-scalable-vector-graphics.jpg).
+14. Photographer image slide 1 (Nate) was taken from [Pinimg](https://i.pinimg.com/originals/b4/ac/e5/b4ace54b45cb820a6d19ca17488d86fb.jpg).
+15. Photographer image slide 2 (Nikkie) was taken from [Vectorstock](https://www.vectorstock.com/royalty-free-vector/african-american-photographer-taking-a-photo-vector-20596313).
+16. Photographer image slide 3 (Kev) was taken from [Istockphoto](https://media.istockphoto.com/vectors/the-boy-is-wearing-an-outer-and-bring-bag-with-taking-a-photo-while-vector-id1311550350?k=20&m=1311550350&s=612x612&w=0&h=LNkkeas3q7SHV_DlVtZiXBg69bM8-XnhiGvvpxzjO_I=).	
+
+The rest of the images are taken by the author of this project (Olga Sokolova).
+## Images description credits
+
+Below are the links to resources where some of the products' description was taken from.
+
+1. [Blackrock castle](https://en.wikipedia.org/wiki/Blackrock_Castle).
+2. [Mizen Foot Bridge](http://www.bridgesofdublin.ie/bridge-building/famous-bridges/mizen-head-footbridge-2010).
+3. [Greenway Passage](https://en.wikipedia.org/wiki/Cork,_Blackrock_and_Passage_Railway).
+4. [Sally Gap](https://visitwicklow.ie/listing/sally-gap/).
+5. [Atlantic Puffin](https://en.wikipedia.org/wiki/Atlantic_puffin).
+6. [Robin in nature](http://www.askaboutireland.ie/learning-zone/primary-students/1st-+-2nd-class/1st-2nd-class-environment/feathered-friends/robin/).
+7. [Irish Woman with Red Hair](https://www.istockphoto.com/photo/beautiful-irish-girl-on-st-patricks-day-dublin-ireland-gm534457350-94832499).
+8. [Irish Woman with Red Hair](https://lisbdnet.com/what-are-typical-irish-facial-features/).
+9. [Irish Man with a Pint](https://www.gettyimages.ie/detail/photo/happy-irishman-vintage-portrait-royalty-free-image/143918986).
+10. [Lion's Mane jellyfish](https://coastmonkey.ie/lions-mane-jellyfish-sandycove/).
+11. [Humpback Whale](https://coastmonkey.ie/whale-watch-ireland-2017/).
+12. [Gorgonocephalus](https://coastmonkey.ie/rare-sponge-reef-coral-ireland/).
+13. [Kylemore Abbey](https://www.kylemore-pass-hotel-connemara.com/activities/kylemore-abbey/).
+14. [Ross Caslte](https://en.wikipedia.org/wiki/Ross_Castle).
+
+# Other Crefits
+
+1. Fonts ideas are taken from [Artisanthemes](https://artisanthemes.io/best-google-fonts-combinations-modern-agency-website/).
+
+2. [Django Documentation](https://docs.djangoproject.com/en/4.0/) was extensively used throughout the develpment of "Oh, Hello Ireland!" project.
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
