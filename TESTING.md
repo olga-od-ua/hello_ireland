@@ -12,7 +12,7 @@
 ## [Email](#emails)
 ## [Modals](#modal-testing)
 ## [CRUD](#crud-testing)
-## [Bugs](#bugs-test)
+## [Bugs](#bugs-and-fixes)
 ## [RETURN TO README](https://github.com/olga-od-ua/hello_ireland/blob/main/README.md)
 
 ## User stories testing:
@@ -21,71 +21,188 @@
 
 1. As a Customer I want to be able to see the full list of all products in order to select single products to purchase.
 
+- This can be achieved from the Home page by clicking on "GO TO IMAGES BUTTON", the castle image or by following the All Images link in the main menu. Back to All products button and other buttons returning the customer to the Products page are also extensively available across the website.
+
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_1.png)
+
 2. As a Customer I want to be able to view individual product details so that I can see the image in a higher resolution by opening it in a new window, identify the price, product rating, description, available sizes.
 
-3. As a Customer I want to be able to see the grand total of my order at any time so that I can decide whether to buy more products or remove some from the basket
+- This is achieved by either clicking on the image itself or by clicking on the DETAILS button.
+
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_2.png)
+
+3. As a Customer I want to be able to see the grand total of my order at any time so that I can decide whether to buy more products or remove some from the basket.
+
+- This goal is achieved through the grand total that is displayed right next to the shopping basket icon on the navigation bar.
+
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_3.png)
+
+4. As a Site User I want to be able to find some information about the website.
+
+- The User will see the About Us navigation bar link and will be able to navigate to the About Us page where they will be able to find the general information about the website, see its best reviews and the photographers whose images are for sale.
+
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_4.png)
 
 ### Registration and User Accounts
 
-4. As a Site User I want to be able to easily register for an account so that I can have a personal account and to be able to view my profile.
+5. As a Site User I want to be able to easily register for an account so that I can have a personal account and to be able to view my profile.
 
-5. As a Site User I want to be able to easily login and logout so that I can access my personal information.
+- This is achieved through the "Register" link in the navbar.
 
-6. As a Site User I want to be able to sasily recover password so that I can get access to my account.
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_5a.png)
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_5b.png)
 
-7. As a Site User I want to be able to receive an email confirmation after registering in order to verify that my account registration was successful.
+6. As a Site User I want to be able to easily login and logout so that I can access my personal information.
 
-8. As a Site User I want to be able to have a personalized user account so that I can view my personal order history, save my payment details.
+- Log in functionality is available in multiple views of the website with the main location being the navbar. Logout functionality is available from the navbar only.
+
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_6a.png)
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_6b.png)
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_6c.png)
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_6d.png)
+
+7. As a Site User I want to be able to easily recover password so that I can get access to my account.
+
+- This is achievable from the login view from any login link the user follows.
+
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_7a.png)
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_7b.png)
+
+8. As a Site User I want to be able to receive an email confirmation after registering in order to verify that my account registration was successful.
+
+- A confirmation email is sent upon successful registration and the user can confirm their email by following the link provided in the confirmation email.
+
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_8a.png)
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_8b.png)
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_8c.png)
+
+9. As a Site User I want to be able to have a personalized user account so that I can view my personal order history, save my payment details.
+
+- This is also achievable after a successful registration and the profile can be accessed by a user through My Profile navbar link.
+
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_9.png)
 
 ### Sorting and Searching
 
-9. As a Shopper	I want to be able to sort the list of available products in order to identify the best-priced, alphabetically and categorically sorted products.
+10. As a Shopper I want to be able to sort the list of available products in order to identify the best-priced, alphabetically and categorically sorted products.
 
-10. As a Shopper I want to be able to sort a specific category of products in order to identify the best-priced product in a selected category, sort products in that category by name.
+- The user is able to sort products alphabetically, by category and by price (low to high and high to low) within All products.
 
-11. As a Shopper I want to be able to search for a product by name, location or description	in order to find a specific product I'd like to purchase.
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_10.png)
 
-12. As a Shopper I want to be able to see what I've searched for in the search result and the number of my search results in order to quickly decide whether the product I need is available.
+11. As a Shopper I want to be able to sort a specific category of products in order to identify the best-priced product in a selected category, sort products in that category by name.
+
+- The user is able to sort products alphabetically, by category and by price (low to high and high to low) within a specific category of products.
+
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_11.png)
+
+12. As a Shopper I want to be able to search for a product by name, location or description	in order to find a specific product I'd like to purchase.
+
+- The user can use a search bar from the navigation menu in order to perform such a search.
+
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_12.png)
+
+13. As a Shopper I want to be able to see what I've searched for in the search result and the number of my search results in order to quickly decide whether the product I need is available.
+
+- This is also achievable through the search bar from the navbar and the results of an example search can be found in the User story number 13.
 
 ### Purchasing and Checkout
 
-13. As a Shopper I want to be able to easily select the quantity of the products I want to purchase	so that I can add the correct product and its quantity to my shopping bag.
+14. As a Shopper I want to be able to easily select the quantity of the products I want to purchase	so that I can add the correct product and its quantity to my shopping bag.
 
-14. As a Shopper I want to be able to view items in my shopping bag	so that I can identify the total cost of my order and the items I have ordered.
+- A User can select the quantity of the desired product from the product details page.
 
-15. As a Shopper I want to be able to adjust the quantity of a particular item in my shopping bag so that I can easily make changes to my order before checkout.
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_14.png)
 
-16. As a Shopper I want to be able to easily submit my payment details in order to checkout effectively.
+15. As a Shopper I want to be able to view items in my shopping bag	so that I can identify the total cost of my order and the items I have ordered.
 
-17. As a Shopper I want to be assured that my personal and payment information is safe and secure so that I can confidently provide information that is needed to complete a purchase.
+- All this information can be found in the User's shopping bag which is reachable from the navbar as well as from the "Go to secure checkout" button from the messages.
 
-18. As a Shopper I want to be able to view an order confirmation after checkout	so that I can verify that the order is correct.
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_15.png)
 
-19. As a Shopper I want to be able to receive an email confirmation after checkout in order to have a copy of the order confirmation for my records.
+16. As a Shopper I want to be able to adjust the quantity of a particular item in my shopping bag so that I can easily make changes to my order before checkout.
+
+- Users can adjust the quantity of a particular size of a particular item with the help of the quantity input field and the Update and Remove buttons.
+
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_16.png)
+
+17. As a Shopper I want to be able to easily submit my payment details in order to checkout effectively.
+
+- This is achievable through the "Secure checkout" button. The user will be redirected to the Shipping information form and the credit card input.
+
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_17.png)
+
+18. As a Shopper I want to be assured that my personal and payment information is safe and secure so that I can confidently provide information that is needed to complete a purchase.
+
+- This is achieved by providing clear instructions to the User to fill out the checkout form and input the card details as well as providing a very detailed summary of the changes.
+
+19. As a Shopper I want to be able to view an order confirmation after checkout	so that I can verify that the order is correct.
+
+- The User will see an order confirmation summary upon successful checkout.
+
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_19.png)
+
+20. As a Shopper I want to be able to receive an email confirmation after checkout in order to have a copy of the order confirmation for my records.
+
+- Such email is received upon successful checkout. Please see the screenshot below.
+
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_20.png)
 
 ### Admin and Store Management
 
-20. As a Store Owner I want to be able to add a new product so that I can add new items to my shop.
+21. As a Store Owner I want to be able to add a new product so that I can add new items to my shop.
 
-21. As a Store Owner I want to be able to edit a product so that I can change product criteria such as price, description, image etc..
+- This is achievable through the Add product form from the Product Management link on the navbar.
 
-22. As a Store Owner I want to be able to delete a product so that I can remove items that are no longer on sale.
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_21.png)
+
+22. As a Store Owner I want to be able to edit a product so that I can change product criteria such as price, description, image etc.
+
+- This is possible by clicking on the "Edit" buttons on either the Products view or the Product Details view.
+
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_22a.png)
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_22b.png)
+
+23. As a Store Owner I want to be able to delete a product so that I can remove items that are no longer on sale.
+
+- This is possible by clicking on the "Delete" buttons on either the Products view or the Product Details view. Same screenshots as in User Story number 22 apply.
 
 ### Reviews and Ratings
 
-23. As a Site User I want to be able to see reviews of products from other users in order to quickly decide whether this particular image is worth the purchase.
+24. As a Site User I want to be able to see reviews of products from other users in order to quickly decide whether this particular image is worth the purchase.
 
-24. As a Site User I want to be able to leave a review or several reviews on a specific product in order to quickly and easily share my opinion and impression of the given product.
+- Reviews are displayed on each product details page.
 
-25. As a Site User I want to be able to delete my own review/reviews I have ever left on the website so that I can easily delete the information I personally shared about a specific product.
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_24.png)
+
+25. As a Site User I want to be able to leave a review or several reviews on a specific product in order to quickly and easily share my opinion and impression of the given product.
+
+- An authenticated user can leave a review by clicking on the "Add a Review" button which will redirect the User to the Review form.
+
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_25.png)
+
+26. As a Site User I want to be able to delete my own review/reviews I have ever left on the website so that I can easily delete the information I personally shared about a specific product.
+
+- An authenticated User will be able to delete their reviews by clicking on the red "Delete Your Review" button. See screenshot for User Story number 24.
 
 ### Favourite Products
 
-26. As a Shopper/Site User I want to be able to add images that I liked to my favourites in order to quickly and easily find them in the future (e.g. save an image for a later purchase or review).
+27. As a Shopper/Site User I want to be able to add images that I liked to my favourites in order to quickly and easily find them in the future (e.g. save an image for a later purchase or review).
 
-27. As a Shopper/Site User I want to be able to view images that I marked as my favourites so that I can proceed to purchase them.
+- An authenticated User will be able to add any image to the list of their favourite images by clicking on the "Add to favourites" button from the Product Details view. Once the image is in their Favourites, the button switches to the "Remove from favourites" button.
 
-28. As a Shopper/Site User I want to be able to remove images that I no longer want to be marked as My Favourites so that I can easily manage My Favourites section of my account.
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_27a.png)
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_27b.png)
+
+28. As a Shopper/Site User I want to be able to view images that I marked as my favourites so that I can proceed to purchase them.
+
+- An authenticated User will be able to see their Favourite images in My Favourites section via the relevant navbar link.
+
+![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_28.png)
+
+29. As a Shopper/Site User I want to be able to remove images that I no longer want to be marked as My Favourites so that I can easily manage My Favourites section of my account.
+
+- An authenticated User will be able to remove images from the list of their Favourite images from the My Favourites section or from the relevant Product Details view by clicking on the "Remove from favourites" buttons. These buttons can be seen on screenshots for User Stories number 27 and 28.
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:2px;border-width:0;color:gray;background-color: #eca50b">
@@ -99,14 +216,14 @@ HTML code of the website passed the validation without major errors or warnings.
 
 The "The type attribute is unnecessary for JavaScript resources." warning was left unchanged as it is has a vital role in the code. 
 
-The error "“Element li not allowed as child of element nav in this context” which was fixed by wrapping each <li> element of the mobile-top-header.html in a <ul> unordered list.
+The error "Element li not allowed as child of element nav in this context" which was fixed by wrapping each list element of the mobile-top-header.html in an unordered list elements.
 
 ### **CSS**:
 
 ![CSS validation](media/readme_images/validation/CSS_validation.png)
 All the CSS code passed the validation as shown on the screenshot above.
 
-During the code review it was noticed that the css code for styling of the checkout form fields was located in the project-level base.css file. It was moved to checkout.css.
+During the code review it was noticed that the css code for the styling of the checkout form fields was located in the project-level base.css file. It was moved to checkout.css.
 
 ### **PEP8 Compliance**:
 
@@ -123,31 +240,30 @@ All Javascript code was validated using [Jshint validator](https://jshint.com/).
 ## Manual Testing:
 
 ### Responsive Design: 
-For this project I decided to use [Bootstrap](https://getbootstrap.com/). Its grid system allows for excellent responsive designs. I used [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) to check how my application was looking on all screen sizes and adjusted as necessary. I had to use minimal media queries in my css code.
+
 
 ### Call to action buttons:
-I checked and rechecked all buttons were working on all devices and were leading to the correct sections of the website. It was also important that I laid out 
-my CTA choices in order of priorty.
+
 
 ### External links:
-I made sure to check that all links and social media links were directed to the correct URLS and also that my target="_blank" attribute was working. 
-All external links open in a new browser tab.
+
 
 ### Internal links:
-I made sure to check that all interal links were working correctly to ensure they led to the correct destinations and that there were no broken links. I also checked that using browser back and forward buttons did not cause any errors or break the website.
+
 
 ### Lighthouse performance test:
-![Lighhouse test](wireframes/lighthouse.png)
+![Lighhouse test]()
 
-I used Lighthouse in Chrome devtools to test my website's performance.
-I increased my SEO scores by adding meta content for seo description.
-I found that testing with lighthouse generated higher scores in incognito mode due to browser caching.
+Lighthouse in Chrome devtools was used to test the website's performance. According to the Lighthouse suggestion the report was generated from an Incognito mode.
+
+Two warnings were taken into account and fixed, namely: 
+- adding a meta description to base.html
+- adding the rel="noopener" attribute to the external social media links located in the footer.
 
 ### Accessibility:
 
 ![Accessiblity test](wireframes/accessibility.png)
 
-I used [a11y](https://color.a11y.com/) to make sure my color contrasts between fonts and backgrounds was acceptable without excessively comprising my vision of the website final design.
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
@@ -163,20 +279,11 @@ I used [a11y](https://color.a11y.com/) to make sure my color contrasts between f
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
 ## User Authentication:
-I carried out exstensive testing to make sure no user error caused the site to malfunction. To achieve this I would check all urls available to non logged in and logged in users and manually change them in the browser. I got the following results: 
-
-1. **Changing to a url that does not exists**: 
-If a user attempts to change the website's path to a non-existing one they will receive a standard 404 error which lets the user know there is no such page.
-
-![404 error](!!!ADD screenshot)
-
-2. **Changing a user url to an admin url**:
-While logged in or authenticated if a user tries to change a url to a url that only admin can access. They are given a warning message that "Only admin can do that!".
 
 ![Authentication](!!! ADD )
 
 3. **Adding Reviews and Adding to Favourites**:
-Any action that requires a user to be authenticated will guide them to the sign up form. The login decorator and templating syntax has been used to achieve user authentication.
+
 
 
 
@@ -224,7 +331,7 @@ Any action that requires a user to be authenticated will guide them to the sign 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
-## Bugs:
+## Bugs and fixes:
 
 * It is known that there are still some minor responsive styling issues for unpopular screen sizes that are planned to be tackled in the future.
 
