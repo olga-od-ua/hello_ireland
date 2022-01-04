@@ -10,7 +10,7 @@
 ## [Authenticaton](#user-authentication)
 ## [Forms](#form-validation)
 ## [Shopping Bag and Checkout](#shopping-bag-and-checkout-process)
-## [Email](#emails)
+## [Email](#email-testing)
 ## [CRUD](#crud-testing)
 ## [Bugs](#bugs-and-fixes)
 ## [RETURN TO README](https://github.com/olga-od-ua/hello_ireland/blob/main/README.md)
@@ -326,10 +326,13 @@ Stripe webhook events were also tested before project submission. All events wer
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
 
-## Automated Testing
+## Email Testing
 
-## **[BACK TO TOP](#content-quick-links)** *
-<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
+Users successfully receive confirmation emails upon creating an account, making a successful purchase and when resetting a password.
+
+![Order confirmation email](media/readme_images/UX_stories/UX_stories_testing/UX_story_20.png)
+![Email verification](media/readme_images/UX_stories/UX_stories_testing/email_verification.png)
+![Welcome Email](media/readme_images/UX_stories/UX_stories_testing/welcome_email.png)
 
 
 ## CRUD Testing
@@ -341,6 +344,12 @@ Stripe webhook events were also tested before project submission. All events wer
 3. The Admin can add, edit and delete products. Al the Add Product form fields are working as expected, the fields marked as required must be filled out.
 
 Other CRUD tests can also be traced in [User Stories Testing section](#user-stories-testing).
+
+## **[BACK TO TOP](#content-quick-links)** *
+<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
+
+
+## Automated Testing
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">

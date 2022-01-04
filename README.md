@@ -233,7 +233,7 @@ Implemented features are presented in the [THE SCOPE PLANE](#the-scope-plane-tab
 
 - REVIEWS. Any Site User can leave a review (or several reviews) on any product. There is no editing available in order to capture the thoughts of that specific reviewer at the time of the review and avoid having users to edit some details of their reviews thus confusing other Site Users with contradicting information. Users, however, are allowed to delete their own reviews entirely. Every product details page displays all the reviews, the rating given at the time of the review, the review message, the date and the reviewer's username. It is aknowledged that when there is a considerable number of reviews is stored, it will be rather unreadable so the presentation of the review will have to be changed to a differently styled section with pagination. It is also known that it is not practical or safe to allow a user to leave as many reviews as they like.
 
-### Future Features
+## Future Features
 
 1. There is currently no sizes or dimensions information available, as well as no size or dimensions selection for an image available throughout the website. Due to time constraints, these features have not been implemented yet and are planned to be implemented in the future. Frame sizes will become available when images can be sold in printed versions. It is also planned to display dimensions of digital images in the product details in the future.
 
@@ -280,7 +280,7 @@ Implemented features are presented in the [THE SCOPE PLANE](#the-scope-plane-tab
 
 # DATABASE SCHEMA
 
-![Daabase schema Lucidchart](media/readme_images/hello-ireland-db-schema.png).
+![Daabase schema Lucidchart](media/readme_images/hello-ireland-db-schema.png)
 
 * It would have been easier and simpler to extend the Product model by adding a "favourites" field and storing a User id in it so that we could then filter the products by the user id and display them in the given user's favourites list. However, to meet the Code Institute's MS4 project requirements of creating 2 unique models, it was decided to create a separate app to meet the needs of Favourites feature of the website.
 
@@ -547,7 +547,7 @@ if 'USE_AWS' in os.environ:
 * A [Tutorial](https://www.youtube.com/watch?v=aCpHK3TIlR8) by [Dev Education](https://dev-ed.ru/).
 * Before creating the Favourites app, I looked up ideas for such functionality that my peers shared on Slack Community, which gave me some ideas and a lot of inspiration.
 
-# IMAGERY CREDITS
+## Imagery Credits 
 
 1. Blacksod Point Lighthouse image was found on [Buildings Of Ireland](https://www.buildingsofireland.ie/building-of-the-month/blacksod-point-lighthouse-fallmore-td-county-mayo/) website.
 2. Atlantic Puffin image was downloaded from [Wikipedia](https://en.wikipedia.org/wiki/Fauna_of_Ireland). Photo is taken by Andreas Trepte.
