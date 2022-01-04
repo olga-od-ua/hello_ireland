@@ -9,9 +9,8 @@
 ## [Automated Tests](#automated-testing)
 ## [Authenticaton](#user-authentication)
 ## [Forms](#form-validation)
-## [Shopping Bag and Checkout](#shopping-bag-and-checkout)
+## [Shopping Bag and Checkout](#shopping-bag-and-checkout-process)
 ## [Email](#emails)
-## [Modals](#modal-testing)
 ## [CRUD](#crud-testing)
 ## [Bugs](#bugs-and-fixes)
 ## [RETURN TO README](https://github.com/olga-od-ua/hello_ireland/blob/main/README.md)
@@ -249,7 +248,7 @@ Two warnings were taken into account and fixed, namely:
 
 ### Accessibility:
 
-![Accessiblity test](wireframes/accessibility.png)
+![Accessiblity test](media/readme_images/accessibility_validator.png)
 
 
 ## **[BACK TO TOP](#content-quick-links)** *
@@ -294,7 +293,7 @@ The following links are only available to the admin and when manually added by a
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
 
-### User Authentication
+## User Authentication
 
 User registration, sign in and sign out was thoroughly tested on multiple users and is working as expected which can also be seen from [User Stories Testing section](#user-stories-testing) with screenshots included.
 
@@ -306,7 +305,7 @@ Adding and deleting reviews is working as expected. Adding and removing to and f
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
 
-### Form Validation
+## Form Validation
 
 All forms, their required fields and other forms of validation are functioning properly.
 
@@ -316,7 +315,7 @@ Review message textarea is currently restricted to 200 characters in order to av
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
 
-### Shopping Bag and Checkout
+## Shopping Bag and Checkout Process
 
 All shopping bag and checkout functionality was thoroughly tested on various devices by multiple users and no errors were detected while trying to make a purchase or cancel the process at any time before successful payment. Relevant screenshots can be found in [User Stories Testing section](#user-stories-testing).
 
@@ -347,7 +346,7 @@ Other CRUD tests can also be traced in [User Stories Testing section](#user-stor
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
 
-## Bugs and fixes:
+## Bugs and fixes
 
 ### Fixed bugs
 
@@ -425,7 +424,6 @@ I used the following command instead: "git push heroku main" whenever I needed t
 * If only one product is displayed after running a search query, the sorting dropdown is not disabled.
 
 * On the About Us page only 5-star reviews were selected. This was done for business advertising purposes.
-
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
