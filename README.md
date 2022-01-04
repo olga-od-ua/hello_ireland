@@ -18,6 +18,7 @@ Unlike other image stock online stores, "Oh, Hello Ireland!" sells images made b
 ## [THE SKELETON PLANE](#the-skeleton-plane-wireframes)
 ## [THE SURFACE PLANE](#the-surface-plane-details)
 ## [FEATURES](#present-and-future-features)
+## [SITE MAP](#site-map-diagram)
 ## [DATABASE](#database-schema)
 ## [TECHNOLOGIES](#technologies-used)
 ## [TESTING](#detailed-testing)
@@ -269,7 +270,17 @@ Implemented features are presented in the [THE SCOPE PLANE](#the-scope-plane-tab
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
 
+# Site Map Diagram
+
+![Site Map](media/readme_images/hello-ireland-site-map.png)
+
+## **[BACK TO TOP](#content-quick-links)** *
+<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
+
+
 # DATABASE SCHEMA
+
+![Daabase schema Lucidchart](media/readme_images/hello-ireland-db-schema.png).
 
 * It would have been easier and simpler to extend the Product model by adding a "favourites" field and storing a User id in it so that we could then filter the products by the user id and display them in the given user's favourites list. However, to meet the Code Institute's MS4 project requirements of creating 2 unique models, it was decided to create a separate app to meet the needs of Favourites feature of the website.
 
@@ -359,11 +370,8 @@ Implemented features are presented in the [THE SCOPE PLANE](#the-scope-plane-tab
 26. [Color Contrast Accessibility Validator](https://color.a11y.com/Contrast/)
     - Color Contrast Accessibility Validator was used to generate an accessibility report.
 
-???27. [Lucid Chart](https://www.lucidchart.com/pages/)
-* Lucid chart was used to create the sitemap.
-
-???28. [db diagram](https://dbdiagram.io/home)
-* Db diagram was used to create the database schema.
+27. [Lucid Chart](https://www.lucidchart.com/pages/)
+    - Lucid chart was used to create the sitemap and the database schema.
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">

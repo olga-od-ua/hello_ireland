@@ -319,6 +319,10 @@ Review message textarea is currently restricted to 200 characters in order to av
 ### Shopping Bag and Checkout
 
 All shopping bag and checkout functionality was thoroughly tested on various devices by multiple users and no errors were detected while trying to make a purchase or cancel the process at any time before successful payment. Relevant screenshots can be found in [User Stories Testing section](#user-stories-testing).
+
+Stripe webhook events were also tested before project submission. All events were successful.
+
+![Stripe Webhook Events Testing](media/readme_images/stripe_wh_test.png)
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
