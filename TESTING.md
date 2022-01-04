@@ -6,7 +6,6 @@
 ## [User Stories](#user-stories-testing)
 ## [Validation](#code-validation)
 ## [Manual Tests](#manual-testing)
-## [Automated Tests](#automated-testing)
 ## [Authenticaton](#user-authentication)
 ## [Forms](#form-validation)
 ## [Shopping Bag and Checkout](#shopping-bag-and-checkout-process)
@@ -350,6 +349,10 @@ Other CRUD tests can also be traced in [User Stories Testing section](#user-stor
 
 
 ## Automated Testing
+
+I attempted to follow the [Automated Testing: Behaviour Driven Development](https://www.youtube.com/watch?v=tHSJ4-ZqbLs) tutorial by Naoise Gaffney in order to create automated testing. I kept receiving the below error regardless of the chromedriver file location. I was getting very close to the deadline submission time and had to postpone automated testing to a later stage. I also discovered that chromedriver cannot be used in GitPod since GitPod is Lenux which will not be compatible with the chromedriver for mac. This is. however, is not a trusted source and I will continue growing my knowledge in automated testing.
+
+![Auto test error](media/readme_images/auto_testing_error.png)
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
