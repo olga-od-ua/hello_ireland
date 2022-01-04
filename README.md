@@ -46,7 +46,7 @@ Unlike other image stock online stores, "Oh, Hello Ireland!" sells images made b
 
 # USER STORIES LIST
 
-The target audience is people of all ages and nationalities who are interested in browing and/or purchasing authentic images of Ireland.
+The target audience is people of all ages and nationalities who are interested in browsing and/or purchasing authentic images of Ireland.
 
 ### Viewing and Navigation
 
@@ -145,7 +145,7 @@ This table shows all the website's existing features in the 1st Release column a
 * "Oh Ireland!" logo that is linked to the Home Page 
 * Images dropdown with the following dropdown list items:
    - All Images
-   - Buldnigs
+   - Buildnigs
    - Landscapes
    - Portraits
    - Ocean and Sea Life
@@ -181,7 +181,7 @@ This table shows all the website's existing features in the 1st Release column a
 
 4. Images menu item will offer the user to select among All images and one of the five categories.
 
-5. About Us page will give the user the brief information about the website creators. Here users will also be able to see the highest rated reviews and information about the website's photographers.
+5. About Us page will give the user brief information about the website creators. Here users will also be able to see the highest-rated reviews and information about the website's photographers.
 
 6. From My Account users will be able to manage their account, login and logout, manage their Favourite Products. The site owners will be able to manage Products.
 
@@ -210,17 +210,17 @@ This table shows all the website's existing features in the 1st Release column a
 The website is designed in a minimalistic style in order to create the impression of simplicity to the user.
 
 ### Colour Scheme
-A mix of the following colours was used throughout the website as a representation of the Irish Flag colours: #20a73d, #fff and #eca50b. The buttons that carry out main functionality are styled in black colour to be distinct.
+A mix of the following colours was used throughout the website as a representation of the Irish Flag colours: #20a73d, #fff and #eca50b. The buttons that carry out the main functionality are styled in black colour to be distinct.
 
 ### Typography
-Montserrat Light was selected as the main font for light weight, delicate and trendy headlines. Lora Regular font was selected for all the text as the most matching font with Montserrat Light creating a clean look.
+Montserrat Light was selected as the main font for lightweight, delicate and trendy headlines. Lora Regular font was selected for all the text as the most matching font with Montserrat Light creating a clean look.
 
 ### Imagery
 There are not many images across the website other than the images that are for sale.
 
 Among images that are not for sale are the background image with the green shamrock theme and the shamrock favicon to represent the Irish theme of the website.
 
-In the ideal scenario there would be a shamrock icon next to the logo "Oh Ireland!" instead of a "seeding" icon from Font Awesome. A shamrock icon is not available on Fontawesome so for the time- and budget-saving purposes a free "seeding" icon from Font Awesome was selected.
+In the ideal scenario there would be a shamrock icon next to the logo "Oh Ireland!" instead of a "seeding" icon from Font Awesome. A shamrock icon is not available on Fontawesome so for time- and budget-saving purposes a free "seeding" icon from Font Awesome was selected.
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
@@ -231,21 +231,21 @@ In the ideal scenario there would be a shamrock icon next to the logo "Oh Irelan
 
 Implemented features are presented in the [THE SCOPE PLANE](#the-scope-plane-table) in the column related to the first release. Below are some notes about the existing features.
 
-- REVIEWS. Any Site User can leave a review (or several reviews) on any product. There is no editing available in order to capture the thoughts of that specific reviewer at the time of the review and avoid having users to edit some details of their reviews thus confusing other Site Users with contradicting information. Users, however, are allowed to delete their own reviews entirely. Every product details page displays all the reviews, the rating given at the time of the review, the review message, the date and the reviewer's username. It is understood that at when the is a considerable number of reviews is stored, it will be rather unreadable so the presentation of the review will have to be changed to a differently styled section with pagination. It is also known that it is not practical or safe to allow a user to leave as many reviews as they like.
+- REVIEWS. Any Site User can leave a review (or several reviews) on any product. There is no editing available in order to capture the thoughts of that specific reviewer at the time of the review and avoid having users to edit some details of their reviews thus confusing other Site Users with contradicting information. Users, however, are allowed to delete their own reviews entirely. Every product details page displays all the reviews, the rating given at the time of the review, the review message, the date and the reviewer's username. It is aknowledged that when there is a considerable number of reviews is stored, it will be rather unreadable so the presentation of the review will have to be changed to a differently styled section with pagination. It is also known that it is not practical or safe to allow a user to leave as many reviews as they like.
 
 ### Future Features
 
-1. There is currently no sizes or dimensions information available, as well as no size or dimensions selection for an image available throughout the website. Due to time constraints these features have not been implemented yet and are planned to be implemented in the future. Frame sizes will become available when images can be sold in printed versions. It is also planned to display dimensions of digital images in the product details in the future.
+1. There is currently no sizes or dimensions information available, as well as no size or dimensions selection for an image available throughout the website. Due to time constraints, these features have not been implemented yet and are planned to be implemented in the future. Frame sizes will become available when images can be sold in printed versions. It is also planned to display dimensions of digital images in the product details in the future.
 
-2. Currently any authenticated user can leave a review for any product. As a future feature, it is planned to destinguish whether the reviewer bought the image they are reviewing in the past or whether they bought a different image or whether they have not made a purchase from the website yet.
+2. Currently any authenticated user can leave a review for any product. As a future feature, it is planned to distinguish whether the reviewer bought the image they are reviewing in the past or whether they bought a different image or whether they have not made a purchase from the website yet.
 
-3. Currently any authenticated user can leave as many reviews as they like. In the future it is planned to put some restrictions in place (e.g. only one review per product or allowing to only review products that the user had bought in the past).
+3. Currently any authenticated user can leave as many reviews as they like. In the future, it is planned to put some restrictions in place (e.g. only one review per product or allowing to only review products that the user had bought in the past).
 
 4. As a future feature, it is planned to display all the reviews that a specific user left on the website on their account for their reference and management (i.e. deletion).
 
 5. Once there is a considerable number of reviews on one page at a time (e.g. more than 10-15) it is planned to implement pagination or other feature to make the reviews part of the website more readable and intuitive.
 
-6. Social links in the footer were added for visual purposes only and do not carry out any critical functionality. They are currently linked to the home page of the respective website. In the future they will be redirecting the user to the appropriate destination. 
+6. Social links in the footer were added for visual purposes only and do not carry out any critical functionality. They are currently linked to the home page of the respective website. In the future, they will be redirecting the user to the appropriate destination. 
 
 7. Rating field will be removed from the Add a Product form and the ratings data will be taken from user reviews. As this feature is not implemented yet (due to time constraints), sorting by rating is not currently implemented. 
 
@@ -253,15 +253,15 @@ Implemented features are presented in the [THE SCOPE PLANE](#the-scope-plane-tab
 
 9. Currently, the How It Works section on the Home Page states that "You will receive a digital copy of the purchased image via email within 3 days upon successful purchase." This will be carried out by the admin who will be checking the new orders and sending the digital copies of the image manually to the customer. It is planned to automate this process where the admin will automatically receive notifications when a new order is placed and the digital copy of the purchased image will be sent to the customer at the time of purchase.
 
-10. As new photographers join the store it would be great to create a separate app to manage photographers' database and display them on the about us page in a more concise code, e.g. a for loop. Due to time constraints this is added to the future features and a bootstrap carousel was used to display just three photographers for visual UX purposes. Once that is implemented, we will be able to display the photographer's name under the images they have taken and sort and filter by photographers.
+10. As new photographers join the store it would be great to create a separate app to manage photographers' database and display them on the about us page in a more concise code, e.g. a for loop. Due to time constraints, this is added to the future features and a bootstrap carousel was used to display just three photographers for visual UX purposes. Once that is implemented, we will be able to display the photographer's name under the images they have taken and sort and filter by photographers.
 
-11. Currently when a user signs in from a product details page from the login link under the review section, they are brought to the sign in page and once signed in, they are redirected to the home page instead of the same product details page. Due to time constraint this issue was not resolved and is planned to be tackled in the future.
+11. Currently when a user signs in from a product details page from the login link under the review section, they are brought to the sign in page and once signed in, they are redirected to the home page instead of the same product details page. Due to the time constraints, this issue was not resolved and is planned to be tackled in the future.
 
 12. There is currently no pagination or back to top button in place on My Favourites page and this is planned as a future feature.
 
 13. Users can leave reviews in any language. It would be great to explore the solutions to tackle different languages in the future.
 
-14. Due to time constraints defensive programming was not extensive enough. It is planned to implement is widely throughout the site (e.g. when a user is deleting an object it is necessary to ask them to confirm their action to prevent unwanted actions).
+14. Due to time constraints defensive programming was not extensive enough. It is planned to implement it widely throughout the site (e.g. when a user is deleting an object it is necessary to ask them to confirm their action to prevent unwanted actions).
 
 15. It would be great to allow users to sort and/or filter by location.
 
@@ -284,7 +284,7 @@ Implemented features are presented in the [THE SCOPE PLANE](#the-scope-plane-tab
 
 * It would have been easier and simpler to extend the Product model by adding a "favourites" field and storing a User id in it so that we could then filter the products by the user id and display them in the given user's favourites list. However, to meet the Code Institute's MS4 project requirements of creating 2 unique models, it was decided to create a separate app to meet the needs of Favourites feature of the website.
 
-* Products class was initially named Arts, however was renamed into Products which would be more suitable for the future website usage in case new kinds of products (other than arts and photos) are added, such as photo frames, souvenirs, etc.
+* Products class was initially named Arts, however, was renamed into Products which would be more suitable for the future website usage in case new kinds of products (other than arts and photos) are added, such as photo frames, souvenirs, etc.
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
@@ -293,7 +293,7 @@ Implemented features are presented in the [THE SCOPE PLANE](#the-scope-plane-tab
 # TECHNOLOGIES USED
 
 1. [Balsamiq](https://balsamiq.com/wireframes/)
-    - This technology helped my visualize my website before starting to write any code, which made the development process a lot more structured and logical.
+    - This technology helped me visualize my website before starting to write any code, which made the development process a lot more structured and logical.
 
 2. [HTML 5](https://en.wikipedia.org/wiki/HTML)
     - HTML was used as the main mark up language.
@@ -302,10 +302,10 @@ Implemented features are presented in the [THE SCOPE PLANE](#the-scope-plane-tab
     - CSS 3 was used to style the elements and create a more visually appealing website.
 
 4. [Javascript](https://www.javascript.com/)
-    - Javascript was used to to extend functionality of Django framework features and create other interactive facets.
+    - Javascript was used to extend the functionality of Django framework features and create other interactive facets.
 
 5. [Jquery](https://jquery.com/)
-    - Jquery, same as JavaScript, was used to to extend functionality of Django framework features and create other short-hand interactive facets.
+    - Jquery, same as JavaScript, was used to extend the functionality of Django framework features and create other short-hand interactive facets.
 
 6. [Bootstrap 4.4.1](https://getbootstrap.com/docs/)
     - Bootstrap was used for quick and easy style and layout solutions.
@@ -314,7 +314,7 @@ Implemented features are presented in the [THE SCOPE PLANE](#the-scope-plane-tab
     - Fontawesome was used for all the icons of the website for aesthetic and UX purposes.
 
 8. [Gitpod](https://www.gitpod.io/)
-    - Git pod was used as an IDE workspace to write and run all the code and its changes. Git was used as a version control to commit and push all the code to the respective GitHub repository.
+    - Git pod was used as an IDE workspace to write and run all the code and its changes. Git was used as version control to commit and push all the code to the respective GitHub repository.
 
 9. [Github](https://github.com/)
     - GitHub was used for storage of all the commits and code back up.
@@ -393,12 +393,12 @@ Click here for the detailed [Testing Information](https://github.com/olga-od-ua/
 * [PIP](https://pip.pypa.io/en/stable/)
 * [Python3](https://www.python.org/download/releases/3.0/)
 * [Amazon AWS S3 bucket](https://aws.amazon.com/)
-### Create a local copy:
+### Create a local copy
 
-### Directions: 
+### Directions:
 1. On GitHub, navigate to the main page of the repository: [https://github.com/olga-od-ua/hello_ireland/].
 
-2. At the top of the repository, select the Code drop down and copy the Clone URL.
+2. At the top of the repository, select the Code drop-down and copy the Clone URL.
 ![Clone code](media/readme_images/clone_code.png)
 
 3. In your IDE workspace, open a Terminal window and use the cd command to change the directory to where you want the cloned directory to be made and type git clone and paste in https://github.com/olga-od-ua/hello_ireland.git .
@@ -465,11 +465,11 @@ Enter the following keys and values, which can be found in your env.py and setti
 * USE_AWS	True
 
 ### Deploy automatically from github:
-* Click on the deployment tab in Heroku.
+* Click on the Deployment tab in Heroku.
 * Choose your github profile and add your repository name.
 * Press the search button and when it is found click "connect to this app" button.
 * Return to the Deploy tab and under Automatic deploys select Enable Automatic Deploys.
-* In the GitPod CLI add, commit and push all changes and Heroku will automatically deploy app.
+* In the GitPod CLI add, commit and push all changes and Heroku will automatically deploy the app.
 * git add .
 * git commit -m "_commit message_"
 * git push
@@ -483,7 +483,7 @@ The media files for the deployed site are hosted in AWS S3 Bucket. In order to s
 * Bucket Policy
 * Group
 * Access Policy
-* User. Please note that it is important to download AWS User Credentials (namely Access key ID and Secret access key) at the time of creting as they will not be available for download at any later stage.
+* User. Please note that it is important to download AWS User Credentials (namely Access key ID and Secret access key) at the time of creating as they will not be available for download at any later stage.
 
 Once these settings are implemented, AWS needs to be connected to Django using the following steps:
 
@@ -520,7 +520,7 @@ if 'USE_AWS' in os.environ:
 - AWS_ACCESS_KEY_ID from Access key ID column of your AWS User credentials file.
 - AWS_SECRET_ACCESS_KEY from Secret access key column of your AWS User credentials file.
 
-* Remove the DISABLE_COLLECTSTATIC variable from Convig Vars and deploy the Heroku app.
+* Remove the DISABLE_COLLECTSTATIC variable from Config Vars and deploy the Heroku app.
 
 * In AWS, create a new folder called media next to the static folder and upload any required media files to it, making sure they are publicly accessible in Permissions.
 
@@ -529,7 +529,7 @@ if 'USE_AWS' in os.environ:
 
 1. Project contains a few commits that were made only for the purposes of testing the automatic deploy functionality ("testing deployment") which did not work properly at the start.
 
-2. There was an accidental revert of the commit id 57d1c229ec867143f91c963ccb8b2669c3f1dab6 which resulted in the loss of all the code related to ProductReview model. This was restored by recreating Reviews functionality from scratch.
+2. There was an accidental revert of the commit id 57d1c229ec867143f91c963ccb8b2669c3f1dab6 which resulted in the loss of all the code related to ProductReview model. This was restored by recreating the Reviews functionality from scratch.
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
@@ -537,7 +537,7 @@ if 'USE_AWS' in os.environ:
 
 # CODE CREDITS
 
-1. A lot of the website's structure, functionality and style code was borrowed from the [Code Institute's](https://codeinstitute.net/ie/) walkthrough project "Boutique Ado" from the "Full Stack Frameworks With Django" module. For the time-saving purposes and in order to strengthen the knowledge received from this module it was decided to utilize the borrowed code instead of 'reinventing the wheel'. Thank you Chris Z for such a thorough, valuable and inspirational walkthrough project.
+1. A lot of the website's structure, functionality and style code was borrowed from the [Code Institute's](https://codeinstitute.net/ie/) walkthrough project "Boutique Ado" from the "Full Stack Frameworks With Django" module. For time-saving purposes and in order to strengthen the knowledge received from this module it was decided to utilize the borrowed code instead of 'reinventing the wheel'. Thank you Chris Z for such a thorough, valuable and inspirational walkthrough project.
 
 2. Product Review functionality was achieved using the knowledge received from the Code Institute course materials along with various previously watched tutorials on YouTube, especially the tutorial by [Great Adib](https://www.youtube.com/watch?v=MmLRE2fCcec) and [Code With Stein](https://www.youtube.com/watch?v=Y5vvGQyHtpM).
 
@@ -550,7 +550,7 @@ if 'USE_AWS' in os.environ:
 # IMAGERY CREDITS
 
 1. Blacksod Point Lighthouse image was found on [Buildings Of Ireland](https://www.buildingsofireland.ie/building-of-the-month/blacksod-point-lighthouse-fallmore-td-county-mayo/) website.
-2. Atlantic Puffin image was downloaded from [Wikipedia](https://en.wikipedia.org/wiki/Fauna_of_Ireland). Photo taken by Andreas Trepte.
+2. Atlantic Puffin image was downloaded from [Wikipedia](https://en.wikipedia.org/wiki/Fauna_of_Ireland). Photo is taken by Andreas Trepte.
 3. Robin in nature image was downloaded from [Google Image Search](https://www.google.com/imgres?imgurl=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2020%2F05%2F08%2F17%2F05%2Frobin-5146569_960_720.jpg&imgrefurl=https%3A%2F%2Fpixabay.com%2Fphotos%2Frobin-bird-nature-wildlife-ireland-5146569%2F&tbnid=rI_r0iABPdFbjM&vet=10CDYQMyjNAmoXChMIwLnQ5-e49AIVAAAAAB0AAAAAEAQ..i&docid=JU9S6pwViw5hvM&w=960&h=582&itg=1&q=wildlife%20ireland&ved=0CDYQMyjNAmoXChMIwLnQ5-e49AIVAAAAAB0AAAAAEAQ).
 4. Irish Girl in Tweed Hat image was downloaded from [Istockphoto](https://www.istockphoto.com/photo/beautiful-irish-girl-on-st-patricks-day-dublin-ireland-gm534457350-94832499).
 5. Irish Woman with Red Hair image is from [StyleMePretty](https://www.stylemepretty.com/).
@@ -590,9 +590,9 @@ Below are the links to resources where some of the products' description was tak
 
 1. Fonts ideas are taken from [Artisanthemes](https://artisanthemes.io/best-google-fonts-combinations-modern-agency-website/).
 
-2. [Django Documentation](https://docs.djangoproject.com/en/4.0/) was extensively used throughout the develpment of "Oh, Hello Ireland!" project.
+2. [Django Documentation](https://docs.djangoproject.com/en/4.0/) was extensively used throughout the development of "Oh, Hello Ireland!" project.
 
-3. I often resorted to [StackOverflow](https://stackoverflow.com/) when encountering some problems. Links to StackOverflow posts that helped me resolve issues are provided in their relevant parts  of this README.md.
+3. I often resorted to [StackOverflow](https://stackoverflow.com/) and [Slack CI Community](https://app.slack.com/) when encountering some problems. Links to the relevant posts that helped me resolve issues are provided in their relevant parts of this README.md and TESTING.md.
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
@@ -600,7 +600,7 @@ Below are the links to resources where some of the products' description was tak
 
 # MY ACKNOWLEDGEMENTS
 
-1. I would like to thank my mentors Gerard McBride and later Sandeep Aggarwal for their professional support and guidance.
+1. I would like to thank my mentors Gerard McBride and ater Sandeep Aggarwal for their professional support and guidance.
 
 2. [Code Institute's](https://codeinstitute.net/ie/) leaders, tutors and all the staff involved in creating such a fantastic course.
 

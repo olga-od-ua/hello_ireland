@@ -79,7 +79,7 @@
 
 9. As a Site User I want to be able to have a personalized user account so that I can view my personal order history, save my payment details.
 
-- This is also achievable after a successful registration and the profile can be accessed by a user through My Profile navbar link.
+- This is also achievable after successful registration and the profile can be accessed by a user through My Profile navbar link.
 
 ![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_9.png)
 
@@ -190,7 +190,7 @@
 
 27. As a Shopper/Site User I want to be able to add images that I liked to my favourites in order to quickly and easily find them in the future (e.g. save an image for a later purchase or review).
 
-- An authenticated User will be able to add any image to the list of their favourite images by clicking on the "Add to favourites" button from the Product Details view. Once the image is in their Favourites, the button switches to the "Remove from favourites" button.
+- An authenticated User will be able to add images that are for sale to the list of their favourite images by clicking on the "Add to favourites" button from the Product Details view. Once the image is in their Favourites, the button switches to the "Remove from favourites" button.
 
 ![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_27a.png)
 ![See screenshot below](media/readme_images/UX_stories/UX_stories_testing/UX_story_27b.png)
@@ -217,7 +217,7 @@ HTML code of the website passed the validation without major errors or warnings.
 
 The "The type attribute is unnecessary for JavaScript resources." warning was left unchanged as it is has a vital role in the code. 
 
-The error "Element li not allowed as child of element nav in this context" which was fixed by wrapping each list element of the mobile-top-header.html in an unordered list elements.
+The error "Element li not allowed as child of element nav in this context" which was fixed by wrapping each list element of the mobile-top-header.html in an unordered list element.
 
 ### **CSS**:
 
@@ -241,7 +241,7 @@ All Javascript code was validated using [Jshint validator](https://jshint.com/).
 ### Lighthouse performance test:
 ![Lighhouse test](media/readme_images/validation/lighthouse_report.png)
 
-Lighthouse in Chrome devtools was used to test the website's performance. According to the Lighthouse suggestion the report was generated from an Incognito mode.
+Lighthouse in Chrome devtools was used to test the website's performance. Following the Lighthouse recommendation, the report was generated from the Incognito mode.
 
 Two warnings were taken into account and fixed, namely: 
 - adding a meta description to base.html
@@ -267,7 +267,7 @@ All call to action buttons were tested on multiple devices and no issues were fo
 
 ### External links
 
-The only external links are the links to social networks in the footer and the urls for images full screen view. These were all tested with no issues detected. All links open in a new window tab.
+The only external links are the links to social networks in the footer and the urls for images full-screen view. These were all tested with no issues detected. All links open in a new window tab.
 
 ### Internal links
 
@@ -341,6 +341,8 @@ Stripe webhook events were also tested before project submission. All events wer
 
 3. The Admin can add, edit and delete products. Al the Add Product form fields are working as expected, the fields marked as required must be filled out.
 
+Other CRUD tests can also be traced in [User Stories Testing section](#user-stories-testing).
+
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
@@ -351,7 +353,7 @@ Stripe webhook events were also tested before project submission. All events wer
 
 * During the testing of the Delete Product function the following error was encountered while trying to delete a product that was still in the shopping bag: "No Product matches the given query." The following Slack post helped to resolve the issue: https://code-institute-room.slack.com/archives/C7HS3U3AP/p1631708528269000 by clearing the site data in the Application Storage.
 
-* In the Shopping_bag view the add_to_bag view was throwingthe following error: "class "Product" has no "objects" member" and the functionality was not working. 
+* In the Shopping_bag view the add_to_bag view was throwing the following error: "class "Product" has no "objects" member" and the functionality was not working. 
 
 Code suggested by the Boutique Ado walkthrough project:
 
@@ -366,7 +368,7 @@ and rerunning the migrations.
 
 * At some point handle_payment_intent_succeeded data wasn't being printed to the terminal `print(intent)` which was fixed by re-exporting the `STRIPE_WH_SECRET=whsec_1BL1Fp0suM9QOI8qiu6OHAC6YhfJCm4c` (the signing secret).
 
-* After completing the adding and deleting reviews functionality I accidentally submitted a review without a rating without realizing it. Futher I started getting the following error: "TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'". This lead to making the rating form field a required one.
+* After completing the adding and deleting reviews functionality I accidentally submitted a review without a rating without realizing it. Further, I started getting the following error: "TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'". This lead to making the rating form field a required one.
 
 * At some point there was an unexpected error in the deployed website. The error appeared when trying to open the Products or My Favourites pages. The errors displayed the following messages: ""ProgrammingError at /products/
 column products_productreview.user_name_id does not exist
@@ -377,11 +379,11 @@ LINE 1: ...""favourites_favouriteproductslist"".""user_id"" FROM ""favourite..."
 This error was tackled by redeploying the website.
 This also involved creating a new endpoint in stripe.
 
-* The shipping cost was displayed with three decimal places in the confirmation email causing the grand total to be displayed in the same manner even though the Order model class specifies two decimal places for the shipping_cost field: `shipping_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)`. This bug was fixed by addin floatformat filter to confirmation email body.
+* The shipping cost was displayed with three decimal places in the confirmation email causing the grand total to be displayed in the same manner even though the Order model class specifies two decimal places for the shipping_cost field: `shipping_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)`. This bug was fixed by adding a floatformat filter to the confirmation email body.
 
-* Upon comletion of the shopping bag functionality with thouroughly followed steps described in the Boutique ADO walkthrough project, it was still possible for a user to manually input quantity outside 1-99 range and successfully update the shopping bag with that input. It appeared that min="1" and max="99" attributes were not working with the implemented quantity input JavaScript code. The solution was to restrict the manual input of values outside 1-99 range by using a jQuery solution offered by Praveen Kumar Purushothaman on [Stackoveflow](https://stackoverflow.com/questions/32936352/html-number-input-min-and-max-not-working-properly#:~:text=you%20can%20only-,restrict,-the%20values%20to).
+* Upon completion of the shopping bag functionality with thoroughly followed steps described in the Boutique ADO walkthrough project, it was still possible for a user to manually input quantity outside 1-99 range and successfully update the shopping bag with that input. It appeared that min="1" and max="99" attributes were not working with the implemented quantity input JavaScript code. The solution was to restrict the manual input of values outside 1-99 range by using a jQuery solution offered by Praveen Kumar Purushothaman on [Stackoveflow](https://stackoverflow.com/questions/32936352/html-number-input-min-and-max-not-working-properly#:~:text=you%20can%20only-,restrict,-the%20values%20to).
 
-The "+" and "-" increment and decrement buttons still have some flaws, e.g. if the current input value is 98 (meaning that both increment and decrement "+" and "-" buttons are not disabled, we can then manually change the quantity value to 99 and if we then press the increment "+" button, the quantity will change to 100 and the increment button gets disabled. Same happens if the current quantity value is 2, then we manually change it to 1 which does not disable the decrement "-" button, then click on the decrement "-" button and the value turns into 0 therefore the product gets removed from the shopping bag if the user proceeds to update this product. It was decided to leave this issue for the time being as it does not drastically affect the business logic (a customer cannot go over 100 items and the case of a customer performing the steps described above are expected to be extremely rare).
+The "+" and "-" increment and decrement buttons still have some flaws, e.g. if the current input value is 98 (meaning that both increment and decrement "+" and "-" buttons are not disabled, we can then manually change the quantity value to 99 and if we then press the increment "+" button, the quantity will change to 100 and the increment button gets disabled. The same happens if the current quantity value is 2, then we manually change it to 1 which does not disable the decrement "-" button, then click on the decrement "-" button and the value turns into 0 therefore the product gets removed from the shopping bag if the user proceeds to update this product. It was decided to leave this issue for the time being as it does not drastically affect the business logic (a customer cannot go over 100 items and the case of a customer performing the steps described above are expected to be extremely rare).
 
 * `git push heroku master` displays the following errors:
 `error: src refspec master does not match any`
@@ -392,7 +394,7 @@ I used the following command instead: "git push heroku main" whenever I needed t
 
 * It is known that there are still some minor responsive styling issues for unpopular screen sizes that are planned to be tackled in the future.
 
-* Currently when a user signs in from a product details page from the login link under the review section, they are brought to the sign in page and once logged in, they are redirected to the home page instead of the same product details page. Due to time constraint this issue was not resolved and is planned to be tackled in the future.
+* Currently when a user signs in from a product details page from the login link under the review section, they are brought to the sign in page and once logged in, they are redirected to the home page instead of the same product details page. Due to time constraints, this issue was not resolved and is planned to be tackled in the future.
 
 * Orders in a User's order history are sometimes not being sorted by date in the deployed app, however are sorted by date in the development mode.
 
@@ -408,7 +410,7 @@ I used the following command instead: "git push heroku main" whenever I needed t
 
 ### Not bugs but the room for improvement and other notes.
 
-* It is planned to prepopulate user's full name in the checkout form for authanticated users.
+* It is planned to prepopulate the user's full name in the checkout form for authenticated users.
 
 * Blue outline can be traced throughout the website upon a click on a button or link. This was not tackled due to time constraints.
 
@@ -422,7 +424,7 @@ I used the following command instead: "git push heroku main" whenever I needed t
 
 * If only one product is displayed after running a search query, the sorting dropdown is not disabled.
 
-* On the About Us page only 5 star reviews were selected. This was done for the business advertising purposes.
+* On the About Us page only 5-star reviews were selected. This was done for business advertising purposes.
 
 
 ## **[BACK TO TOP](#content-quick-links)** *
