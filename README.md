@@ -219,6 +219,8 @@ There are not many images across the website other than the images that are for 
 
 Among images that are not for sale are the background image with the green shamrock theme and the shamrock favicon to represent the Irish theme of the website.
 
+In the ideal scenario there would be a shamrock icon next to the logo "Oh Ireland!" instead of a "seeding" icon from Font Awesome. A shamrock icon is not available on Fontawesome so for the time- and budget-saving purposes a free "seeding" icon from Font Awesome was selected.
+
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
@@ -256,12 +258,22 @@ Implemented features are presented in the [THE SCOPE PLANE](#the-scope-plane-tab
 
 12. There is currently no pagination or back to top button in place on My Favourites page and this is planned as a future feature.
 
+13. Users can leave reviews in any language. It would be great to explore the solutions to tackle different languages in the future.
+
+14. Due to time constraints defensive programming was not extensive enough. It is planned to implement is widely throughout the site (e.g. when a user is deleting an object it is necessary to ask them to confirm their action to prevent unwanted actions).
+
+15. It would be great to allow users to sort and/or filter by location.
+
+16. Add contact details or a contact us form in case a user has some inquiries. This was not implemented due to time constraints.
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
 
 # DATABASE SCHEMA
 
+* It would have been easier and simpler to extend the Product model by adding a "favourites" field and storing a User id in it so that we could then filter the products by the user id and display them in the given user's favourites list. However, to meet the Code Institute's MS4 project requirements of creating 2 unique models, it was decided to create a separate app to meet the needs of Favourites feature of the website.
+
+* Products class was initially named Arts, however was renamed into Products which would be more suitable for the future website usage in case new kinds of products (other than arts and photos) are added, such as photo frames, souvenirs, etc.
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
@@ -308,47 +320,50 @@ Implemented features are presented in the [THE SCOPE PLANE](#the-scope-plane-tab
 13. [PEP8 validator](http://pep8online.com/)
     - PEP8 online was used to ensure all python files pass PEP8 industry standards.
 
-???15. [Lucid Chart](https://www.lucidchart.com/pages/)
-* Lucid chart was used to create the sitemap.
-
-???16. [db diagram](https://dbdiagram.io/home)
-* Db diagram was used to create the database schema.
-
-17. [PIP3](https://pip.pypa.io/en/stable/)
+14. [PIP3](https://pip.pypa.io/en/stable/)
     - PIP3 was used to install all packaging tools.
 
-18. [Am I responsive](http://ami.responsivedesign.is/)
+15. [Am I responsive](http://ami.responsivedesign.is/)
     - 'Am I responsive' was used to create screenshots from four main types of devices to be displayed in the README file.
 
-19. [Python3](https://www.python.org/download/releases/3.0/)
+16. [Python3](https://www.python.org/download/releases/3.0/)
     - Python was used as the backend programming language.
 
-20. [Django](https://www.djangoproject.com/)
+17. [Django](https://www.djangoproject.com/)
     - Django was used as the framework for all the backend functionality. All the backend database data is injected into the html templates using django template tags.
 
-21. [SQLite3](https://www.sqlite.org/index.html)
+18. [SQLite3](https://www.sqlite.org/index.html)
     - SQLite was used as the default relational database.
 
-22. [Postgresql](https://www.postgresql.org/)
+19. [Postgresql](https://www.postgresql.org/)
     - Postgresql was used as the database for the deployed Oh Hello Ireland Heroku app.
 
-23. [Heroku](https://id.heroku.com/login)
+20. [Heroku](https://id.heroku.com/login)
     - Heroku was used as the hosting platform for this project.
 
-24. [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+21. [Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
     - Chrome Developer Tools were used extensively during the development to ensure good responsiveness of the website and for debugging.
 
-28. [Stripe](https://stripe.com/ie)
+22. [Stripe](https://stripe.com/ie)
     - Stipe test API was used to take secure test payments from customers in the Checkout app.
 
-29. [Amazon AWS](https://aws.amazon.com/)
+23. [Amazon AWS](https://aws.amazon.com/)
     - Amazon AWS was used for hosting all the static files for the purposes of improving the site's performance and scalability.
 
-30. [Cloudinary](https://cloudinary.com/)
+24. [Cloudinary](https://cloudinary.com/)
     - Cloudinary was used for storing the full-sized products' images as well as the favicon image.
 
-31. [Grammarly](https://app.grammarly.com/)
+25. [Grammarly](https://app.grammarly.com/)
     - Grammarly was used to perform spellcheck across all project files.
+
+26. [Color Contrast Accessibility Validator](https://color.a11y.com/Contrast/)
+    - Color Contrast Accessibility Validator was used to generate an accessibility report.
+
+???27. [Lucid Chart](https://www.lucidchart.com/pages/)
+* Lucid chart was used to create the sitemap.
+
+???28. [db diagram](https://dbdiagram.io/home)
+* Db diagram was used to create the database schema.
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">

@@ -9,8 +9,7 @@
 ## [Automated Tests](#automated-testing)
 ## [Authenticaton](#user-authentication)
 ## [Forms](#form-validation)
-## [Shopping Bag](#shopping-bag)
-## [Checkout](#checking-out)
+## [Shopping Bag and Checkout](#shopping-bag-and-checkout)
 ## [Email](#emails)
 ## [Modals](#modal-testing)
 ## [CRUD](#crud-testing)
@@ -239,23 +238,6 @@ Some flake8 and pylint errors were left unresolved due to the complexity of the 
 
 All Javascript code was validated using [Jshint validator](https://jshint.com/). All JavaScript code passed the validation without any major warnings or errors. A few missing semicolons were added and a few unnecessary ones were removed.
 
-## **[BACK TO TOP](#content-quick-links)** *
-<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
-
-## Manual Testing:
-
-### Responsive Design: 
-
-
-### Call to action buttons:
-
-
-### External links:
-
-
-### Internal links:
-
-
 ### Lighthouse performance test:
 ![Lighhouse test](media/readme_images/validation/lighthouse_report.png)
 
@@ -273,85 +255,152 @@ Two warnings were taken into account and fixed, namely:
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
+## Manual Testing
+
+### Responsive Design
+
+The responsiveness of the website was being tested and gradually improved during the development process. There still may be a few styling issues for unpopular screen sizes.
+
+### Call to action buttons
+
+All call to action buttons were tested on multiple devices and no issues were found.
+
+### External links
+
+The only external links are the links to social networks in the footer and the urls for images full screen view. These were all tested with no issues detected. All links open in a new window tab.
+
+### Internal links
+
+All the internal links have been rechecked multiple times on various devices to ensure their correct functionality.
+
+It was also tested to see if a user will be able to carry out tasks they are not authorised for.
+
+The following links are only available to logged-in users and if a user manually inputs one of the following liks the site throws an error:
+- `https://hello-ireland.herokuapp.com/favourites/my_favourites`
+- `https://hello-ireland.herokuapp.com/add/<int:product_id>` (add to favourites)
+- `https://hello-ireland.herokuapp.com/remove/<int:product_id> `(remove from favourites)
+- `https://hello-ireland.herokuapp.com/products/<int:product_id>/add_review/`
+- `https://hello-ireland.herokuapp.com/products/<int:product_id>/delete_review/`
+- `https://hello-ireland.herokuapp.com/profile/`
+
+The following links are only available to the admin and when manually added by a user who is not an admin the Error message is displayed and the user is redirected to the Home Page:
+- `https://hello-ireland.herokuapp.com/products/add/`
+- `https://hello-ireland.herokuapp.com/products/edit/<int:product_id>/`
+- `https://hello-ireland.herokuapp.com/products/delete/<int:product_id>`
+
+![Only admin can do this](media/readme_images/only_admin.png)
+
+## **[BACK TO TOP](#content-quick-links)** *
+<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
+
+
+### User Authentication
+
+User registration, sign in and sign out was thoroughly tested on multiple users and is working as expected which can also be seen from [User Stories Testing section](#user-stories-testing) with screenshots included.
+
+### Adding Reviews and Adding to Favourites
+
+Adding and deleting reviews is working as expected. Adding and removing to and from Favourites is also functioning as planned. Relevant screenshots can be found in [User Stories Testing section](#user-stories-testing).
+
+## **[BACK TO TOP](#content-quick-links)** *
+<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
+
+
+### Form Validation
+
+All forms, their required fields and other forms of validation are functioning properly.
+
+Review message textarea is currently restricted to 200 characters in order to avoid lengthy messages for UI purposes. This was chosen as a temporary "easy fix" due to time constraints in lieu of creating a "see more" button.
+
+## **[BACK TO TOP](#content-quick-links)** *
+<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
+
+
+### Shopping Bag and Checkout
+
+All shopping bag and checkout functionality was thoroughly tested on various devices by multiple users and no errors were detected while trying to make a purchase or cancel the process at any time before successful payment. Relevant screenshots can be found in [User Stories Testing section](#user-stories-testing).
+## **[BACK TO TOP](#content-quick-links)** *
+<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
+
+
 ## Automated Testing
 
-
-
-![Automated Test](ADD)
-
-
-## **[BACK TO TOP](#content-quick-links)** *
-<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
-
-## User Authentication:
-
-![Authentication](!!! ADD )
-
-3. **Adding Reviews and Adding to Favourites**:
-
-
-
-
-### Features Available To Non Registerd Users:
-
-### Features Only Available to Admin:
-
-## **[BACK TO TOP](#content-quick-links)** *
-<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
-
-## Form Validation:
-
-## **[BACK TO TOP](#content-quick-links)** *
-<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
-
-## Shopping Bag:
-
-## **[BACK TO TOP](#content-quick-links)** *
-<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
-
-## Checking Out:
-
-
-## **[BACK TO TOP](#content-quick-links)** *
-<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
-
-## Emails:
-
-
-### Modal Testing
-
-
-## **[BACK TO TOP](#content-quick-links)** *
-<hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
-
-## CRUD Testing:
-
-1. For the testing purposes a product without an image was added to the database. It displayed the noimage.png as the image as expected.  
-
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
 
+## CRUD Testing
+
+1. For the testing purposes a product without an image was added to the database. It displayed the noimage.png as expected.  
+
+2. A product without frame sizes was added for testing purposes of the size selector box. As expected, this product did not have the size selector box displayed in the product details view.
+
+3. The Admin can add, edit and delete products. Al the Add Product form fields are working as expected, the fields marked as required must be filled out.
 
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
+
 
 ## Bugs and fixes:
 
-* It is known that there are still some minor responsive styling issues for unpopular screen sizes that are planned to be tackled in the future.
+### Fixed bugs
 
 * During the testing of the Delete Product function the following error was encountered while trying to delete a product that was still in the shopping bag: "No Product matches the given query." The following Slack post helped to resolve the issue: https://code-institute-room.slack.com/archives/C7HS3U3AP/p1631708528269000 by clearing the site data in the Application Storage.
+
+* In the Shopping_bag view the add_to_bag view was throwingthe following error: "class "Product" has no "objects" member" and the functionality was not working. 
+
+Code suggested by the Boutique Ado walkthrough project:
+
+`product = Product.objects.get(pk=item_id)`
+
+The issue was eradicated with importing get_object_or_404 and refactoring the code in the following way: `product = get_object_or_404(Product, pk=item_id)`
+
+* There was a bug on the OrdeLineItem model in the Products app which was displaying the following error when attempting to checkout: "OperationalError at /checkout/
+table checkout_orderlineitem has no column named product_size". With the help from Sheryl in Tutor Support we fixed this error by specifying the name of the db_column:
+`product_size = models.CharField(max_length=4, null=True, blank=True, db_column="product_size")`
+and rerunning the migrations.
+
+* At some point handle_payment_intent_succeeded data wasn't being printed to the terminal `print(intent)` which was fixed by re-exporting the `STRIPE_WH_SECRET=whsec_1BL1Fp0suM9QOI8qiu6OHAC6YhfJCm4c` (the signing secret).
+
+* After completing the adding and deleting reviews functionality I accidentally submitted a review without a rating without realizing it. Futher I started getting the following error: "TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'". This lead to making the rating form field a required one.
+
+* At some point there was an unexpected error in the deployed website. The error appeared when trying to open the Products or My Favourites pages. The errors displayed the following messages: ""ProgrammingError at /products/
+column products_productreview.user_name_id does not exist
+LINE 1: ...iew"".""id"", ""products_productreview"".""product_id"", ""products_..."" and ""ProgrammingError at /favourites/my_favourites/
+relation ""favourites_favouriteproductslist"" does not exist
+LINE 1: ...""favourites_favouriteproductslist"".""user_id"" FROM ""favourite..."" respectively."
+
+This error was tackled by redeploying the website.
+This also involved creating a new endpoint in stripe.
+
+* The shipping cost was displayed with three decimal places in the confirmation email causing the grand total to be displayed in the same manner even though the Order model class specifies two decimal places for the shipping_cost field: `shipping_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)`. This bug was fixed by addin floatformat filter to confirmation email body.
+
+* Upon comletion of the shopping bag functionality with thouroughly followed steps described in the Boutique ADO walkthrough project, it was still possible for a user to manually input quantity outside 1-99 range and successfully update the shopping bag with that input. It appeared that min="1" and max="99" attributes were not working with the implemented quantity input JavaScript code. The solution was to restrict the manual input of values outside 1-99 range by using a jQuery solution offered by Praveen Kumar Purushothaman on [Stackoveflow](https://stackoverflow.com/questions/32936352/html-number-input-min-and-max-not-working-properly#:~:text=you%20can%20only-,restrict,-the%20values%20to).
+
+The "+" and "-" increment and decrement buttons still have some flaws, e.g. if the current input value is 98 (meaning that both increment and decrement "+" and "-" buttons are not disabled, we can then manually change the quantity value to 99 and if we then press the increment "+" button, the quantity will change to 100 and the increment button gets disabled. Same happens if the current quantity value is 2, then we manually change it to 1 which does not disable the decrement "-" button, then click on the decrement "-" button and the value turns into 0 therefore the product gets removed from the shopping bag if the user proceeds to update this product. It was decided to leave this issue for the time being as it does not drastically affect the business logic (a customer cannot go over 100 items and the case of a customer performing the steps described above are expected to be extremely rare).
+
+* `git push heroku master` displays the following errors:
+`error: src refspec master does not match any`
+`error: failed to push some refs to 'https://git.heroku.com/oh-hello-ireland.git'`
+I used the following command instead: "git push heroku main" whenever I needed to push to Heroku.
+
+### Known Bugs
+
+* It is known that there are still some minor responsive styling issues for unpopular screen sizes that are planned to be tackled in the future.
+
+* Currently when a user signs in from a product details page from the login link under the review section, they are brought to the sign in page and once logged in, they are redirected to the home page instead of the same product details page. Due to time constraint this issue was not resolved and is planned to be tackled in the future.
+
+* Orders in a User's order history are sometimes not being sorted by date in the deployed app, however are sorted by date in the development mode.
+
+* Input fields in focus are left unstyled for both visual and time-saving purposes.
+
+* Back to all products button appears even when there is no category selected, no search or sorting was performed.
 
 * There is a number of flake8 and pylint errors that were not resolved due to my lack of experience and knowledge (which is constantly improving), as well as time constraints and the complexity and potential affect on the functionality of the site.
 
 * Rating field is still displayed and is editable in the Add Product form. Since the ratings are coming from user reviews, this field should not be editable by anyone (including the site admin). This will be taken care of in the future as the time did not allow to look into this issue closely.
 
 * The toasts messages reappear from the previous action when the back browser button is clicked. It is planned in the future to implement a timeout function and ensure the message does not reappear.
-
-### Known Bugs
-
-* Currently when a user signs in from a product details page from the login link under the review section, they are brought to the sign in page and once logged in, they are redirected to the home page instead of the same product details page. Due to time constraint this issue was not resolved and is planned to be tackled in the future.
-
 
 ### Not bugs but the room for improvement and other notes.
 
@@ -366,6 +415,12 @@ Two warnings were taken into account and fixed, namely:
 * Currently all the products are images hence they have frame sizes. The functionality for products with no frame sizes was implemented for educational purposes and in case the store will start selling products with no frame sizes, e.g. digital images only.
 
 * As this project is for educational purposes the watermarks have not been removed.
+
+* If only one product is displayed after running a search query, the sorting dropdown is not disabled.
+
+* On the About Us page only 5 star reviews were selected. This was done for the business advertising purposes.
+
+
 ## **[BACK TO TOP](#content-quick-links)** *
 <hr style="height:5px;border-width:0;color:gray;background-color: #eca50b">
 
